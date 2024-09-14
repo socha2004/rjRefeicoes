@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+
+    <meta name="description" content="Restaurante R&amp;J Refei&#231;&#245;es Manaus. Fa&#231;a Pedidos e acesse o Card&#225;pio do MenuDino On-line.  R&amp;J Refei&#231;&#245;es est&#225; localizada na cidade Manaus, no bairro Mauazinho.">
+    <meta name="keywords" content="Restaurante R&amp;J Refei&#231;&#245;es Manaus - AM.">
+    <meta name="theme-color" content="#212121" />
+    <meta name="msapplication-TileColor" content="#212121">
+        <link rel="apple-touch-icon" sizes="192x192" href="https://files.menudino.com/cardapios/69698/pwa/logo192.png">
+        <link rel="icon" type="image/png" sizes="192x192" href="https://files.menudino.com/cardapios/69698/pwa/logo192.png">
+        <meta name="msapplication-TileImage" content="https://files.menudino.com/cardapios/69698/pwa/logo192.png">
+    <meta property="fb:app_id" content="437529085744570" />
+    <meta property="og:title" content="R&amp;J Refei&#231;&#245;es - Manaus" />
+    <meta property="og:type" content="restaurant" />
+    <meta property="og:description" content="Restaurante R&amp;J Refei&#231;&#245;es Manaus. Fa&#231;a Pedidos e acesse o Card&#225;pio do MenuDino On-line.  R&amp;J Refei&#231;&#245;es est&#225; localizada na cidade Manaus, no bairro Mauazinho." />
+        <meta property="og:url" content="https://rfgoncalves.menudino.com/" />
+    <meta property="og:image" itemprop="image" content="https://files.menudino.com/capas/espetinho-00.webp" />
+    <meta property="og:image" itemprop="image" content="https://files.menudino.com/cardapios/69698/logo.png" />
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="300">
+    <meta property="og:image:height" content="300">
+    <meta property="og:image:alt" content="Logo do Cardápio MenuDino" />
+    <title>R&amp;J Refei&#231;&#245;es - Checkout</title>
+
+
+    <!-- =============== VENDOR STYLES ===============-->
+    <link href="https://files.menudino.com/dist/css/font-awesome.min.css" rel="stylesheet"/>
+<link href="https://files.menudino.com/dist/css/simple-line-icons.min.css" rel="stylesheet"/>
+<link href="https://files.menudino.com/dist/css/animate.min.css" rel="stylesheet"/>
+<link href="https://files.menudino.com/dist/css/MaterialIcon.min.css" rel="stylesheet"/>
+<link href="https://files.menudino.com/dist/css/smart-app-banner.min.css" rel="stylesheet"/>
+
+    <!-- =============== BOOTSTRAP STYLES ===============-->
+    <!-- =============== APP STYLES ===============-->
+    <link href="https://files.menudino.com/dist/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://files.menudino.com/dist/css/app.min.css" rel="stylesheet"/>
+
+<link href="https://files.menudino.com/dist/css/theme-j.min.css" rel="stylesheet"/>
+    <link rel="manifest" href="https://files.menudino.com/cardapios/69698/pwa/manifest.json" />
+    <!-- =============== PAGE VENDOR STYLES =============== -->
+
+    <link href="/Content/card.css" rel="stylesheet" />
+    <link href="/Content/agendamento.css" rel="stylesheet" />
+    <!-- Antes da chamada do TagManager incluir: -->
+<script>
+        window.dataLayer = window.dataLayer || [];
+
+        //Variaveis globais para saber se o cardapio está no modo local ou pedidos desabilitados
+        var CardapioModoLocal = false;
+        var CardapioPedidosDesabilitados = false;
+
+</script>
+
+<!-- Google Tag Manager MenuDino -->
+<script>
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-TCKXPRD');</script>
+<!-- End Google Tag Manager MenuDino -->
+
+ 
+
+
+    </head>
+<body class="layout-h layout-fixed">
+    <!-- validação do browser  -->
+    <div class="wrapper mb-lg" id="verifica-cookies" style="display:none">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="panel panel-warning">
+                <div class="panel-heading"><h3 style="color:#fff">Sem suporte a Cookies</h3></div>
+                <div class="panel-body">
+                    <p>Para esse app/site funcionar corretamente o seu navegador/dispositivo deve estar com os <b>cookies</b> habilitados.</p>
+                    <p>Caso n&#227;o tenha modificado nenhuma configura&#231;&#227;o, atualize seu navegador/dispositivo para uma vers&#227;o mais recente.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <!-- validação do browser  -->
+    <div class="wrapper mb-lg" id="verifica-jquery" style="display:none">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="panel panel-warning">
+                <div class="panel-heading"><h3 style="color:#fff">Navegador/dispositivo muito desatualizado</h3></div>
+                <div class="panel-body">
+                    <p>Para esse app/site funcionar corretamente, atualize seu navegador/dispositivo para uma vers&#227;o mais recente.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="wrapper" id="main-wrapper">
+        <!-- top navbar-->
+        <header class="topnavbar-wrapper">
+            <!-- START Top Navbar-->
+<nav class="navbar topnavbar">
+    <!-- START navbar header-->
+    <div class="navbar-header">
+
+                <button type="button" data-toggle-state="aside-toggled" data-no-persist="true" class="navbar-toggle navbar-toggle-main">
+                    <span class="sr-only">Menu</span>
+                    <em class="fa fa-navicon text-white"></em>
+                </button>
+
+        <button type="button" data-search-open="" class="visible-xs navbar-toggle">
+            <span class="sr-only">Pesquisar</span>
+            <em class="icon-magnifier text-white"></em>
+        </button>
+
+        
+
+            <span class="navbar-opcao-entrega abrir-modal-opcao-entrega" data-load="/home/_topnavbarentrega">
+                
+            </span>
+    </div>
+    <!-- END navbar header-->
+    <!-- START Nav wrapper-->
+    <div class="navbar-collapse collapse">
+        <!-- START Left navbar-->
+        
+        <!-- END Left navbar-->
+        <!-- START Right Navbar-->
+        <ul class="nav navbar-nav navbar-right">
+            <!-- START lock screen-->
+            
+            <!-- END lock screen-->
+            <!-- Fullscreen (only desktops)-->
+            
+            <!-- Search icon-->
+            <li class="hidden-xs" id="btnNavBarPesquisa">
+                <a href="#" data-search-open="">
+                    <em class="icon-magnifier"></em>
+                </a>
+            </li>
+            <!-- START Alert menu-->
+            
+            <!-- END Contacts menu-->
+        </ul>
+        <!-- END Right Navbar-->
+    </div>
+    <!-- END Nav wrapper-->
+    <!-- START Search form-->
+    <form role="search" class="navbar-form">
+        <div class="form-group has-feedback">
+            <input id="search" name="search" type="text" placeholder="O que deseja pedir?" class="form-control" autocomplete="off" />
+            <div data-search-dismiss="" class="fa fa-times form-control-feedback"></div>
+        </div>
+        <button type="button" class="hidden btn btn-default">Pesquisar</button>
+    </form>
+    <!-- END Search form-->
+</nav>
+<!-- END Top Navbar-->
+        </header>
+        <!-- sidebar-->
+            <aside class="aside preload">
+                <!-- START Sidebar (left)-->
+<div class="aside-inner">
+    <nav class="sidebar">
+        <!-- START sidebar nav-->
+        <ul class="nav">
+            <!-- START user info-->
+                <li class="has-user-block">
+                    <div id="user-block">
+                        <div class="item user-block">
+                            <!-- User picture-->
+                            
+                            <!-- Name and Job-->
+                            <div class="user-block-info text-center">
+                                <span class="user-block-name">Ol&#225;, VICTOR BRENO CARVALHO DA SILVA</span>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            <!-- END user info-->
+            <!-- Iterates over all sidebar items-->
+            <li class="nav-heading">
+                <span>Menu</span>
+            </li>
+            <li class="">
+                <a href="/" title="Card&#225;pio">
+                    <em class="fa fa-cutlery"></em>
+                    <span>Card&#225;pio</span>
+                </a>
+            </li>
+                    <li class="">
+                        <a href="/pedido/acompanharultimopedido" title="Status Pedido">
+                            <em class="fa fa-wpforms"></em>
+                            <span>Status Pedido</span>
+                        </a>
+                    </li>
+                <li class="  bt">
+                    <a href="/pedido/cupons" title="Cupons">
+                        
+                        <em class="material-icons">local_offer</em>
+                        <span>Cupons</span>
+                    </a>
+                </li>
+                        <li class="bb">
+                            <a href="#" class="showModalLogin" title="Fidelidade">
+                                <em class="material-icons">stars</em>
+                                <span>Fidelidade</span>
+                            </a>
+                        </li>
+                <li>
+                    <a href="#" class="sidebarLogout">
+                        <em class="fa fa-sign-out"></em>
+                        Sair
+                    </a>
+                    <form action="/Cliente/Logout" class="navbar-right" id="logoutForm" method="post">
+                    </form>
+                </li>
+            <li class="nav-heading">
+                <span>Desenvolvido por</span>
+            </li>
+            <li>
+                <img class="center-block img-responsive" src="https://files.menudino.com/padroes/menudino-logo-menor.png" alt="MenuDino" style="max-height: 60px" loading="lazy" />
+            </li>
+            <li class="nav-heading text-center">
+				<span>
+					v.4.1.32.30492
+					- 2024 &#169;
+				</span>
+            </li>
+        </ul>
+        <!-- END sidebar nav-->
+    </nav>
+</div>
+<!-- END Sidebar (left)-->
+            </aside>
+                <!-- Main section-->
+        <section id="main-section">
+            <noscript>
+    <div class="wrapper mb-lg pb-lg">
+        <div class="row pb-lg">
+            <div class="col-lg-12">
+                <div class="panel panel-warning">
+                    <div class="panel-heading"><h3 style="color:#fff">Sem suporte a Javascript</h3></div>
+                    <div class="panel-body">
+                        <p>Para esse app/site funcionar corretamente o seu navegador/dispositivo deve estar com os <b>javascript</b> habilitados.</p>
+                        <p>Caso n&#227;o tenha modificado nenhuma configura&#231;&#227;o, atualize seu navegador/dispositivo para uma vers&#227;o mais recente.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        body {
+            overflow-y: hidden
+        }
+    </style>
+</noscript>
+            <div class="content-wrapper">
+                
+                
+
+
+<div class="row">
+    
+
+
+    <div class="col-md-5" id="resumoPedido">
+        
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h4 class="panel-title">
+            Resumo do Pedido
+        </h4>
+    </div>
+    <div id="divCarrinhoItens">
+        <table class="table mb0" id="carrinho-itens">
+            <tbody>
+<tr>
+    <td class="text-center text-nowrap">1x</td>
+    <td class="text-left">
+        <p class="m0">Frango Assado</p>
+
+
+    </td>
+    <td class="text-right text-nowrap itemCarrinhoValor">18,00</td>
+    <td class="text-center"><a class="btnRemover" href="#" data-id="29179534"><i class="fa fa-trash"></i></a></td>
+</tr><tr>
+    <td class="text-center text-nowrap">1x</td>
+    <td class="text-left">
+        <p class="m0">Assado de Panela</p>
+
+
+    </td>
+    <td class="text-right text-nowrap itemCarrinhoValor">18,00</td>
+    <td class="text-center"><a class="btnRemover" href="#" data-id="29182404"><i class="fa fa-trash"></i></a></td>
+</tr>            </tbody>
+        </table>
+    </div>
+    <div>
+        <table class="table" id="tableTotal">
+            <tbody>
+                
+<tr>
+    <td colspan="3" class="text-center">
+        <a href="/">Adicionar itens...</a>
+    </td>
+</tr>
+<tr>
+    <td class="text-left">Subtotal</td>
+    <td class="text-right">
+        <div class=" text-bold" id="valorTotalItensCarrinho">R$ 36,00</div>
+    </td>
+</tr>
+
+    <tr>
+        <td class="text-left bt0">Taxa de Entrega</td>
+        <td class="text-right bt0">
+            <div class="text-bold" id="valorTaxaEntregaCarrinho">
+                    Gr&#225;tis
+            </div>
+        </td>
+    </tr>
+
+
+
+
+
+
+    <tr>
+
+        
+        <td colspan="3" class="text-center bb0">
+            <a href="javascript:void(0)" id="toggleAplicarCupom" class="small">
+                Cupom de desconto
+            </a>
+        </td>
+
+        
+    </tr>
+
+    <tr>
+        <td colspan="3" class="text-center bt0">
+            <div id="divAplicarCupom" class="nao-exibir mt-sm tdAplicarCupom">
+<form action="/pedido/ChecarAplicarCupomDesconto" id="cupomForm" method="post">                    <div class="input-group block-center">
+                        <input type="text" class="form-control" id="nomecupom" name="nomecupom" required maxlength="20" placeholder="Digite o c&#243;digo do cupom">
+                        <span class="input-group-btn">
+                            <button type="submit" class="btn btn-default">Aplicar</button>
+                        </span>
+                    </div>
+</form>            </div>
+        </td>
+    </tr>
+
+
+    <tr>
+        <td><h4>Total</h4></td>
+        <td colspan="2" class="text-right">
+            <h4 id="valorTotalCarrinho">
+                R$ 36,00
+                <input data-val="true" data-val-number="O campo ValorTotal deve ser um número." data-val-required="The ValorTotal field is required." data-valor="36.00" id="Carrinho_ValorTotal" name="Carrinho.ValorTotal" type="hidden" value="36,00" />
+            </h4>
+        </td>
+    </tr>
+
+    <tr>
+        <td colspan="3">
+            <a href="#" class="abrir-modal-opcao-entrega pull-right" tabindex="-1">Trocar</a>
+            <h4 class="panel-title mb">
+Entregar no endereço            </h4>
+            <div class="text-primary ph pull-left" style="height:70px">
+                <i class="fa fa-map-marker fa-2x"></i>
+            </div>
+            <div style="line-height: 1em;">
+Avenida Torquato Tapaj&#243;s, 11675        <br />
+        <small class="text-muted">
+            Tarum&#227;-A&#231;u, Manaus - AM - 69023-003
+                <br />
+                <small style="line-height: 1em;">
+                    Condom&#237;nio Jasmim  - Condom&#237;nio Jasmim 
+                </small>
+        </small>
+</div>
+
+        </td>
+    </tr>
+
+            </tbody>
+        </table>
+    </div>
+</div>
+
+    </div>
+
+    
+    <div class="col-md-7">
+<form action="/pedido/checkout" class="form-horizontal" id="checkoutForm" method="post"><input data-val="true" data-val-range="Faça o agendamento do pedido !" data-val-range-max="True" data-val-range-min="True" data-val-required="The AgendamentoValido field is required." id="AgendamentoValido" name="AgendamentoValido" type="hidden" value="True" /><input data-val="true" data-val-maxlength="O campo Telefone precisa ter até 15 caracteres." data-val-maxlength-max="15" data-val-required="O campo Telefone é obrigatório." id="TelefoneCliente" name="TelefoneCliente" type="hidden" value="(92) 99465-9423" />
+
+    <input id="MetodoPagamento" name="MetodoPagamento" type="hidden" value="" />
+    <div id="paymentPanel" class="panel panel-default">
+        <div class="panel-heading">
+            <h4 class="panel-title">Pagamento</h4>
+        </div>
+        <div class="panel-body">
+            <div class="panel-group" id="panelAccordion" role="tablist" aria-multiselectable="false">
+
+                    <div id="pagamentoEntrega" class="panel panel-default">
+                        <div role="button" id="pagarEntregaHeading" data-toggle="collapse" class="panel-heading" data-parent="#panelAccordion" href="#pagarEntregaPanelBody" aria-expanded="false" aria-controls="pagarEntregaPanelBody">
+                            <h5 class="panel-title">
+                                <img src="/content/icons/delivery.svg" height="25" />
+                                <span class="ml-sm">Pagar na Entrega</span>
+                            </h5>
+                        </div>
+                        <div id="pagarEntregaPanelBody" class="panelPagamento panel-collapse collapse" role="tabpanel" aria-labelledby="pagarEntregaHeading">
+                            <input name="MetodoPagamentoSelecionado" type="hidden" value="pagar-entrega" />
+                            <div class="panel-body">
+                                <div class="form-group">
+                                    <label class="control-label col-md-4" for="CodigoMeioPagamento">Meio de Pagamento</label>
+                                    <div class="col-sm-8">
+                                        <select class="select form-control" data-val="true" data-val-number="O campo Meio de Pagamento deve ser um número." data-val-required="Escolha o método de pagamento." id="CodigoMeioPagamento" name="CodigoMeioPagamento"><option value="">--- Selecione ---</option>
+<option value="3">Cart&#227;o de Cr&#233;dito</option>
+<option value="4">Cart&#227;o de D&#233;bito</option>
+<option value="1">Dinheiro</option>
+<option value="18">Pix Manual</option>
+<option value="20">Programa de fidelidade, Cashback, Cr&#233;dito Virtual</option>
+<option value="10">Vale Alimenta&#231;&#227;o</option>
+<option value="11">Vale Refei&#231;&#227;o</option>
+</select>
+                                        <span class="field-validation-valid text-danger" data-valmsg-for="CodigoMeioPagamento" data-valmsg-replace="true"></span>
+                                    </div>
+                                </div>
+                                <div class="form-group" style="display: none;">
+                                    <label class="control-label col-md-4" for="CodigoBandeiraPagamento" id="Operadora">Operadora</label>
+                                    <input hidden id="tradPalavras" data-myValue="" />
+                                    <div class="col-sm-8">
+                                        <select id="CodigoBandeiraPagamento" name="CodigoBandeiraPagamento" class="select form-control" required>
+                                            <option value="">--- Selecione ---</option>
+                                        </select>
+                                        <span class="field-validation-valid text-danger" data-valmsg-for="CodigoBandeiraPagamento" data-valmsg-replace="true"></span>
+                                    </div>
+                                </div>
+                                <div class="form-group" style="display: none;">
+                                    <label class="control-label col-md-4" for="TrocoPara">Preciso de Troco Para</label>
+                                    <div class="col-sm-8">
+
+                                        <input class="form-control text-box single-line" data-money="money" data-money-mask="" data-val="true" data-val-number="O campo Preciso de Troco Para deve ser um número." id="TrocoPara" name="TrocoPara" type="tel" value="" />
+                                        <span class="field-validation-valid text-danger" data-valmsg-for="TrocoPara" data-valmsg-replace="true"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <fieldset>
+                            <div class="form-group">
+                                <label class="control-label col-md-4" for="CPFCNPJNota">CPF / CNPJ</label>
+                                <div class="col-sm-8">
+<input class="form-control cpf-ou-cnpj text-box single-line" data-val="true" data-val-cpfcnpj="CPF/CNPJ inválido." id="CPFCNPJNota" name="CPFCNPJNota" placeholder="CPF / CNPJ" type="tel" value="" />
+                                    <span class="field-validation-valid text-danger" data-valmsg-for="CPFCNPJNota" data-valmsg-replace="true"></span>
+                                </div>
+                            </div>
+                        </fieldset>
+                        <fieldset>
+                            <div class="form-group">
+                                <label class="control-label col-md-4" for="Observacao">Observa&#231;&#227;o</label>
+                                <div class="col-sm-8">
+                                    <input class="form-control text-box single-line" data-val="true" data-val-maxlength="O campo Observação deve conter no máximo 250 caracteres." data-val-maxlength-max="250" id="Observacao" name="Observacao" type="text" value="" />
+                                    <span class="field-validation-valid text-danger" data-valmsg-for="Observacao" data-valmsg-replace="true"></span>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+                </div>
+</form>    </div>
+
+
+<nav id="submitButtons" class="p-sm col-md-12">
+<p class="text-center small">Ao continuar, voc&#234; concorda com os <a href="https://menudino.com/termos-de-uso" target="_blank">Termos de Uso</a> e <a href="https://consumer.com.br/politica-de-privacidade" target="_blank">Pol&#237;ticas de Privacidade</a>.</p>                        <button type="submit" class="btn btn-lg btn-block btn-square btn-success text-bold checkoutSubmitButtons"><i class="fa fa-check"></i> ENVIAR PEDIDO</button>
+</nav>
+
+
+</div>
+
+
+
+
+
+            </div>
+            <footer id="footer-wrapper">
+                
+	<small>Desenvolvido por <a href="https://www.consumer.com.br/?afiid=333" target="_blank" title='Sistema para Bares e Restaurantes'>Consumer</a> &copy;</small>
+
+            </footer>
+        </section>
+    </div>
+
+    
+<div id="extra-section">
+
+    <div class="modal-mobile-full2 modal fade" id="agendamentoModal" tabindex="-1" role="dialog">
+    </div>
+
+    <div class="modal-mobile-full2 modal fade" id="cepModal" tabindex="-1" role="dialog">
+    </div>
+
+    <div class="modal-mobile-full2 modal fade" id="loginModal" tabindex="-1" role="dialog">
+        
+<div class="modal-dialog" role="document">
+	<div class="modal-content">
+		<div class="modal-header">
+            <h3 class="mt mb titleHeaderModal" data-title-header-codigo-verificacao="C&#243;digo de verifica&#231;&#227;o" data-title-header-escolha="Como deseja continuar?" data-title-header-login="Informe seu e-mail" data-title-header-cadastrar="Complete seu cadastro">
+                <a href="#" data-dismiss="modal" aria-label="Close" class="pull-right text-gray-dark"><span aria-hidden="true"><i class="fa fa-close"></i></span></a>
+                <span id="loginModalHeader"></span>
+            </h3>
+		</div>
+		<div class="modal-body conteudoModalBody" id="loginModalBody">
+		</div>
+	</div>
+</div>
+    </div>
+
+</div>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCcdd1Xeus0Hb3DM8GTdJZs07KLSoJlxOg&libraries=places,geometry&callback=Function.prototype" async defer></script>
+    <script src="https://files.menudino.com/dist/js/jquery.min.js"></script>
+<script src="https://files.menudino.com/dist/js/jqueryval.min.js"></script>
+
+    <script>
+        var restaurantGoogleMapsApi = undefined;
+        window.onload = function () {
+            if (window.jQuery && document.createElement('canvas').getContext) {
+                // jQuery is loaded
+            } else {
+                // jQuery is not loaded
+                document.getElementById('verifica-jquery').style.display = 'block';
+                document.getElementById('main-wrapper').style.display = 'none';
+                document.getElementById('verCarrinhoLink').style.display = 'none';
+            }
+        }
+
+        $(document).ready(function () {
+            //Se o Cookie for diferente da Sessão Atual vai redirecionar
+            /**/
+            if (!window.location.href.includes("localhost") && !window.location.href.includes("sandbox")) {
+                if ($.cookie('MdCurrent') && sessionStorage.getItem('currentSession') && JSON.parse($.cookie('MdCurrent')).Url != JSON.parse(sessionStorage.getItem('currentSession')).sessionUrl) {
+                    window.location.replace('/' + JSON.parse(sessionStorage.getItem('currentSession')).sessionUrl);
+                    return;
+                }
+            }
+
+            //Adicionando o Header com os dados da sessão atual em todas as requisições AJAX
+            $.ajaxSetup({
+                beforeSend: function (xhr) {
+                    if (sessionStorage.getItem('currentSession')) {
+                        xhr.setRequestHeader('x-current-session', sessionStorage.getItem('currentSession'));
+                    }
+                }
+            });
+
+            // Adicionando os dados da sessão atual em todos os forms postados
+            $(document).on('submit', 'form', function () {
+                if (sessionStorage.getItem('currentSession')) {
+                    var currentSession = JSON.parse(sessionStorage.getItem('currentSession'));
+                    $(this).remove('#sessionId');
+                    $(this).remove('#sessionUrl');
+                    $(this).append($('<input id="sessionId" name="sessionId" type="hidden" value="' + currentSession.sessionId + '" />'));
+                    $(this).append($('<input id="sessionUrl" name="sessionUrl" type="hidden" value="' + currentSession.sessionUrl + '" />'));
+                }
+            });
+
+            if ($.cookie('CardapioIntegracao'))
+                restaurantGoogleMapsApi = JSON.parse($.cookie('CardapioIntegracao')).GoogleMapsApiKey;
+        });
+
+        var mapsApiEnabled = true;
+        function gm_authFailure() {
+            mapsApiEnabled = false;
+        };
+    </script>
+<script src='https://files.menudino.com/dist/js/jqueryval-ptbr.min.js?v=413230492' defer></script>
+    <script src='https://files.menudino.com/dist/js/jquerymask.min.js?v=413230492' defer></script>
+<script src='https://files.menudino.com/dist/js/jquery.cookie.min.js?v=413230492' defer></script>
+<script src='https://files.menudino.com/dist/js/bootstrap.min.js?v=413230492' defer></script>
+<script src='https://files.menudino.com/dist/js/storage.min.js?v=413230492' defer></script>
+<script src='https://files.menudino.com/dist/js/animo.min.js?v=413230492' defer></script>
+<script src='https://files.menudino.com/dist/js/angleapp.min.js?v=413230492' defer></script>
+<script src='https://files.menudino.com/dist/js/external-login.min.js?v=413230492' defer></script>
+
+    
+    <script src='https://files.menudino.com/dist/js/appCheckout.min.js?v=413230492' defer></script>
+
+
+    <script>
+        var isOnline = true;
+        var isAgendado = false;
+        $(document).ready(function () {
+            IniciarScriptCheckout();
+        });
+    </script>
+
+
+    <!-- Google Tag Manager (noscript) MenuDino -->
+<noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TCKXPRD"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+<!-- End Google Tag Manager (noscript) MenuDino -->
+
+<!-- Google Recaptcha -->
+
+    
+    
+
+<div class="modal-mobile-full2 modal fade" id="socialLoginModal" tabindex="-1" role="dialog" aria-labelledby="socialLoginModalLabel" data-backdrop="false">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title" id="socialLoginModalLabel">
+                    <a href="#" data-dismiss="modal" aria-label="Close" class="pull-right text-gray-dark"><span aria-hidden="true"><i class="fa fa-close"></i></span></a>
+                    <span>Entrar com rede social</span>
+                </h3>
+            </div>
+            <div class="modal-body">
+                <iframe id="externalLoginPage" src="https://app.menudino.com/cliente/external-login/?url=rfgoncalves" style="border: none; margin: 0; padding: 0; width: 100%; min-height: 360px; background-color: transparent; "></iframe>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(function () {
+        ExternalLogin.initParent({
+            sourceWindow: document.getElementById("externalLoginPage"),
+            externalLoginCallbackUrl: "/cliente/external-login/callback",
+            domains: ['localhost', 'menudino.com', '']
+        });
+    });
+</script>
+</body>
+</html>
