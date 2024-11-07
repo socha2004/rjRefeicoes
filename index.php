@@ -14,6 +14,16 @@ session_start();
     <link rel="stylesheet" href="src/styles/estiloIndex/estilo.css" type="text/css">
     <link rel="stylesheet" href="src/styles/menuIndex/estilo.css">
     <script src="https://kit.fontawesome.com/4a5dfc2a50.js" crossorigin="anonymous"></script>
+    <style>
+        .cabecalho{
+            background-image: url('src/assets/imagens/FOGO.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: #fff;
+        }
+    </style>
+    <script src="src/js/abertoFechadoPedidos.js"></script>
 </head>
 
 <body>
@@ -112,11 +122,11 @@ session_start();
             <img src="src/assets/imagens/cart.svg" alt="notification-atalho" width="50px">
         </div>
         <div class="d-flex align-items-center p-2 cabecalho-container">
-            <img src="src/assets/imagens/logo2.jpg" alt="Logo" class="logo">
+            <img src="src/assets/imagens/logo.png" alt="Logo" class="logo">
             <div class="d-flex flex-column">
                 <h1>R&J Refeições</h1>
-                <i class="fa-solid fa-location-dot">aaa</i>
-                <span>Aberto para pedidos!</span>
+                <i class="fa-solid fa-location-dot"> Rua Túlio, 130</i>
+                <span class="displayLoja">Aberto para pedidos!</span>
             </div>
         </div>
     </header>
