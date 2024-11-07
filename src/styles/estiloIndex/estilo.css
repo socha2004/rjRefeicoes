@@ -1,25 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
-
-.inria-sans-light {
-    font-family: "Inria Sans", sans-serif;
-    font-weight: 300;
-    font-style: normal;
-}
-
 body{
-    font-family: "inria-sans-light", sans-serif ;
+    font-family: "inria-sans-light", sans-serif;
+    background-color: #d9d9d9;
 }
+
+.cabecalho{
+    background-image: url('/src/assets/imagens/FOGO.jpg');
+}
+
 
 h1{
-    margin: 20px 0 20px 0;
+    margin: 0px 0 0px 0;
 }
 
 h2{
     margin-top: 20px;
-}
-
-.navbar-area{
-    
 }
 
 .nav-item{
@@ -30,10 +24,6 @@ h2{
 .menu-topo{
     background-color: #B10005;
     color: #fff;
-}
-
-.cabecalho-container{
-    border-bottom: 1px solid black;
 }
 
 .card{
@@ -51,3 +41,74 @@ h2{
     width: 150px;
     height: 150px;
 }
+
+.cardapio-area{
+    background-color: #d9d9d9;
+}
+
+/* .card-area{
+    background-color: #fff;
+    width: 60%;
+} */
+
+.menu-area{
+    margin-top: 2%;
+    border-top: 2px solid black;
+    border-bottom:1px solid black ;
+    border-right:1px solid black ;
+    border-left:1px solid black ;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.card-produto{
+    flex-basis: 48%;
+}
+
+ .img-produto{
+    max-width: 150px;
+    max-height: 150px;
+    border-radius: 5px;
+    box-shadow: 20px 8px 23px -7px rgba(0,0,0,0.75);
+ }
+
+ .link{
+    text-decoration: none;
+    color: #000;
+    font-weight: 0;
+ }
+
+ /*PAGINA DE LOOGIN */
+
+ .form-wraper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15%;
+
+ }
+
+ .login-form{
+    border-top: 2px solid black;
+    border: 1px solid black;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 10px;
+
+    -webkit-box-shadow: 18px 11px 19px -1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 18px 11px 19px -1px rgba(0,0,0,0.75);
+    box-shadow: 18px 11px 19px -1px rgba(0,0,0,0.75);
+
+    display: flex;
+    flex-direction: column;
+ }
+
+.login-form input{
+    margin-bottom: 10px;
+}
+
+ .header-form{
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+ }
