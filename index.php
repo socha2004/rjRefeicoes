@@ -25,6 +25,7 @@ session_start();
             background-repeat: no-repeat;
             color: #fff;
         }
+        
     </style>
     <script src="src/js/abertoFechadoPedidos.js"></script>
 </head>
@@ -159,11 +160,11 @@ session_start();
             if ($resultado->num_rows > 0) {
                 while ($linha = $resultado->fetch_assoc()) {
                     $modalId = "detalhesPratoModal" . $linha['id_produto'];
-                    echo "<div class='card' style='width: 18rem;'>
-                            <img class='card-img-top' src='$linha[imagem_produto]' alt='Card image cap'>
+                    echo "<div class='card' style='width:18rem;'>
+                            <img class='card-img-top' src='$linha[imagem_produto]' alt='Card image cap' style='max-height:190px;'>
                             <h5 class='card-title p-1'>$linha[nome_produto]</h5>
                             <div class='card-body'>
-                                <p class='card-text'>$linha[descricao_produto]</p>
+                                <p class='card-text'>Serve <b>$linha[qtd_pessoas] pessoas</b></p>
                                 <p class='card-text'><b>Preço:</b> $linha[preco_produto]</p>
                                 <button type='button' class='btn btn-success'>Comprar</button>
                                 <button type='button' class='btn btn-primary' data-bs-toggle='modal' data-bs-target='#$modalId'>Detalhes</button>
@@ -178,8 +179,9 @@ session_start();
                                     </div>
                                     <div class='modal-body'>
                                         <!-- Conteúdo detalhado do prato -->
-                                        <p>Descrição: $linha[descricao_produto]</p>
-                                        <p>Preço: $linha[preco_produto]</p>
+                                        <p><b>Descrição:</b> $linha[descricao_produto]</p>
+                                        <p><b>Tipo de refeição:</b> $linha[tipo_produto]</p>
+                                        <p><b>Preço:</b> $linha[preco_produto]</p>
                                     </div>
                                 <div class='modal-footer'>
                                     <button type='button' class='btn btn-secondary' data-bs-dismiss='modal'>Fechar</button>

@@ -24,6 +24,8 @@ h2{
 .card{
     margin: 10px;
     width: 50%;
+    flex: 1 1 200px; /* Define uma largura mínima de 200px e permite que os cards cresçam */
+    max-width: 300px; /* Limite de largura máxima, opcional */
 }
 
 .logo{
@@ -32,19 +34,9 @@ h2{
     height: 136px;
 }
 
-.refeicao-foto{
-    width: 150px;
-    height: 150px;
-}
-
 .cardapio-area{
     background-color: #d9d9d9;
 }
-
-/* .card-area{
-    background-color: #fff;
-    width: 60%;
-} */
 
 .menu-area{
     margin-top: 2%;
@@ -56,9 +48,6 @@ h2{
     background-color: #fff;
 }
 
-.card-produto{
-    flex-basis: 48%;
-}
 
  .img-produto{
     max-width: 150px;
@@ -107,3 +96,10 @@ h2{
     align-items: center;
     margin-left: 10px;
  }
+
+ @media (max-width: 576px) {
+    .card {
+        flex: 1 1 100%; /* Cards ocupam 100% da largura em telas pequenas */
+        max-width: 100%;
+    }
+}
