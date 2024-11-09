@@ -28,6 +28,7 @@ session_start();
         
     </style>
     <script src="src/js/abertoFechadoPedidos.js"></script>
+
 </head>
 
 <body>
@@ -54,7 +55,7 @@ session_start();
                                             <path d="M14 12C14 10.3431 12.6569 9 11 9H5C3.34315 9 2 10.3431 2 12V15H14V12Z" fill="#000000"></path>
                                         </g>
                                     </svg>
-                                    <span><b>Login</b></span>
+                                    <span><b>Login Admin</b></span>
                                 </a>
                             </button>
                         </li>
@@ -142,10 +143,10 @@ session_start();
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    <a class="nav-item nav-link" href="#">Pratos do Dia</a>
-                    <a class="nav-item nav-link" href="#">Sobremesa</a>
-                    <a class="nav-item nav-link" href="#">Refrigerantes</a>
-                    <a class="nav-item nav-link" href="#">Sucos</a>
+                    <a class="nav-item nav-link" href="#" data-category="lanche">Pratos do Dia</a>
+                    <a class="nav-item nav-link" href="#" data-category="sobremesa">Sobremesa</a>
+                    <a class="nav-item nav-link" href="#" data-category="refrigerante">Refrigerantes</a>
+                    <a class="nav-item nav-link" href="#" data-category="suco">Sucos</a>
                 </div>
             </div>
         </nav>
@@ -160,7 +161,7 @@ session_start();
             if ($resultado->num_rows > 0) {
                 while ($linha = $resultado->fetch_assoc()) {
                     $modalId = "detalhesPratoModal" . $linha['id_produto'];
-                    echo "<div class='card' style='width:18rem;'>
+                    echo "<div class='card' style='width:18rem;' data-category='$linha[tipo_produto]'>
                             <img class='card-img-top' src='$linha[imagem_produto]' alt='Card image cap' style='max-height:190px;'>
                             <h5 class='card-title p-1'>$linha[nome_produto]</h5>
                             <div class='card-body'>
@@ -199,6 +200,7 @@ session_start();
 
         </div>
     </main>
+    <script src="src/js/filtroProdutos.js"></script>
 </body>
 
 </html>
