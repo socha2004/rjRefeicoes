@@ -1,0 +1,41 @@
+/* L�gico_DElivery: */
+
+CREATE TABLE Cliente (
+    NomeSobrenome VARCHAR,
+    Cpf INTEGER,
+    Endereco VARCHAR,
+    numeroTelefone INTEGER,
+    IDcliente INTEGER PRIMARY KEY
+);
+
+CREATE TABLE Pedido (
+    PrecoPorcao REAL,
+    IDpedido INTEGER PRIMARY KEY,
+    PrecoRefri1500ml REAL,
+    PrecoRefri600ml REAL,
+    PrecoRefri350ml REAL,
+    Suco REAL,
+    PrecoProteina REAL,
+    fk_Cliente_IDcliente INTEGER
+);
+
+CREATE TABLE Carrinho (
+    IDcarrinho INTEGER PRIMARY KEY,
+    precoTotal REAL,
+    fk_Pedido_IDpedido INTEGER,
+    fk_Cliente_IDcliente INTEGER
+);
+ 
+ALTER TABLE Pedido ADD CONSTRAINT FK_Pedido_2
+    FOREIGN KEY (fk_Cliente_IDcliente)
+    REFERENCES Cliente (IDcliente)
+    ON DELETE RESTRICT;
+ 
+ALTER TABLE Carrinho ADD CONSTRAINT FK_Carrinho_2
+    FOREIGN KEY (fk_Pedido_IDpedido)
+    REFERENCES Pedido (IDpedido)
+    ON DELETE RESTRICT;
+ 
+ALTER TABLE Carrinho ADD CONSTRAINT FK_Carrinho_3
+    FOREIGN KEY (fk_Cliente_IDcliente???)
+    REFERENCES ??? (???);
