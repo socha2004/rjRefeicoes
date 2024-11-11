@@ -24,8 +24,8 @@ h2{
 .card{
     margin: 10px;
     width: 50%;
-    flex: 1 1 200px; /* Define uma largura mínima de 200px e permite que os cards cresçam */
-    max-width: 300px; /* Limite de largura máxima, opcional */
+    flex: 1 1 200px; 
+    max-width: 300px; 
 }
 
 .logo{
@@ -67,7 +67,7 @@ h2{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 15%;
+    margin-top: 5%;
 
  }
 
@@ -95,6 +95,24 @@ h2{
     align-items: center;
     margin-left: 10px;
  }
+
+/*TELA CADASTRO ADMINISTRADOR*/
+
+.form-admin{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+
+}
+
+.form-admin input, select{
+    width: 50%;
+}
+
+.button-admin{
+    width: 30%;
+}
 
  @media (max-width: 576px) {
     .card {
