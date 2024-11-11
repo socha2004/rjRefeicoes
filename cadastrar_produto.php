@@ -7,58 +7,61 @@ session_start();
 include_once("src/db/conexao.php"); //conexão com o banco de dados
 
 // Processa o envio do formulário se a solicitação POST for feita
-// if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-//     // Limpe e valide os dados do formulário
-//     $nome_protudo = mysqli_real_escape_string($conectar, $_POST['nome_protudo']);
-//     $codigo = mysqli_real_escape_string($conectar, $_POST['codigo']);
-//     $preco_protudo = $_POST['preco_protudo'];
-//     $descricao_curta = mysqli_real_escape_string($conectar, $_POST['descricao_curta']);
-//     $tipo_protudo = mysqli_real_escape_string($conectar, $_POST['tipo_protudo']);
-//     $id_protudo = (int) $_POST['id_protudo'];
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    // Limpe e valide os dados do formulário
+    $nome_produto = $_POST['nome_produto'];
+    $preco_produto = $_POST['preco_produto'];
+    $descricao_curta = mysqli_real_escape_string($conn, $_POST['descricao_curta']);
+    $tipo_produto = mysqli_real_escape_string($conn, $_POST['tipo_produto']);
+    $id_produto = (int) $_POST['id_produto'];
+    $qtd_pessoas = $_POST['qtd-pessoas'];
 
-//     // Tratamento de upload de arquivos
-//     if (isset($_FILES['arquivo']) && $_FILES['arquivo']['error'] == 0) {
-//         $fileTmpPath = $_FILES['arquivo']['tmp_name'];
-//         $fileName = $_FILES['arquivo']['name'];
-//         $fileSize = $_FILES['arquivo']['size'];
-//         $fileType = $_FILES['arquivo']['type'];
 
-//         //            tipos de arquivos permitidos
-//         $allowedTypes = ['image/jpeg', 'image/png', 'image/gif'];
+    // Tratamento de upload de arquivos
+    if (isset($_FILES['arquivo']) && $_FILES['arquivo']['error'] == 0) {
+        $fileTmpPath = $_FILES['arquivo']['tmp_name'];
+        $fileName = $_FILES['arquivo']['name'];
+        $fileSize = $_FILES['arquivo']['size'];
+        $fileType = $_FILES['arquivo']['type'];
 
-//         // Verifique o tipo e tamanho do arquivo
-//         if (in_array($fileType, $allowedTypes) && $fileSize <= 5000000) { // max 5MB
-//             $newFileName = uniqid() . "_" . basename($fileName);
-//             $uploadDir = 'uploads/';
-//             $fileDest = $uploadDir . $newFileName;
+        //            tipos de arquivos permitidos
+        $allowedTypes = ['image/jpeg', 'image/png', 'image/gif'];
 
-//             if (move_uploaded_file($fileTmpPath, $fileDest)) {
-//                 //Salve os dados no banco de dados após o upload do arquivo com sucesso
-//                 $status = isset($_POST['status']) ? $_POST['status'] : 'Disponível'; // default 'Disponível'
-//                 $query = "INSERT INTO produtos (nome_protudo, codigo, preco_protudo, descricao_curta, descricao_protudo, id_protudo, imagem, status) 
-//                           VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+        // Verifique o tipo e tamanho do arquivo
+        if (in_array($fileType, $allowedTypes) && $fileSize <= 5000000) { // max 5MB
+            $newFileName = uniqid() . "_" . basename($fileName);
+            $uploadDir = 'uploads/';
+            $fileDest = $uploadDir . $newFileName;
 
-//                 $stmt = mysqli_prepare($conectar, $query);
-//                 mysqli_stmt_bind_param($stmt, 'ssssssss', $nome, $codigo, $preco, $descricao_curta, $descricao, $categoria_id, $newFileName, $status);
+            
 
-//                 if (mysqli_stmt_execute($stmt)) {
-//                     $_SESSION['message'] = 'Produto cadastrado com sucesso!';
-//                     header('Location: success_page.php'); //redireciona após sucesso
-//                 } else {
-//                     $_SESSION['message'] = 'Erro ao cadastrar produto!';
-//                 }
+            if (move_uploaded_file($fileTmpPath, $fileDest)) {
+                //Salve os dados no banco de dados após o upload do arquivo com sucesso
+                $status = isset($_POST['status']) ? $_POST['status'] : 'Disponível'; // default 'Disponível'
+                $query = "INSERT INTO produto (nome_produto, preco_produto, descricao_produto, imagem_produto, tipo_produto, qtd_pessoas, status_produto) 
+                          VALUES (?, ?, ?, ?, ?, ?, ?)";
 
-//                 mysqli_stmt_close($stmt);
-//             } else {
-//                 $_SESSION['message'] = 'Erro ao fazer upload da imagem.';
-//             }
-//         } else {
-//             $_SESSION['message'] = 'Arquivo inválido. Apenas imagens JPG, PNG e GIF são permitidas, com no máximo 5MB.';
-//         }
-//     } else {
-//         $_SESSION['message'] = 'Nenhuma imagem foi selecionada ou houve erro no envio.';
-//     }
-// }
+                $stmt = mysqli_prepare($conn, $query);
+                mysqli_stmt_bind_param($stmt, 'sssssss', $nome_produto, $preco_produto, $descricao_curta, $newFileName, $tipo_produto, $qtd_pessoas, $status);
+
+                if (mysqli_stmt_execute($stmt)) {
+                    $_SESSION['message'] = 'Produto cadastrado com sucesso!';
+                    // header('Location: success_page.php'); //redireciona após sucesso
+                } else {
+                    $_SESSION['message'] = 'Erro ao cadastrar produto!';
+                }
+
+                mysqli_stmt_close($stmt);
+            } else {
+                $_SESSION['message'] = 'Erro ao fazer upload da imagem.';
+            }
+        } else {
+            $_SESSION['message'] = 'Arquivo inválido. Apenas imagens JPG, PNG e GIF são permitidas, com no máximo 5MB.';
+        }
+    } else {
+        $_SESSION['message'] = 'Nenhuma imagem foi selecionada ou houve erro no envio.';
+    }
+}
 ?>
 
 <!doctype html>
@@ -98,7 +101,7 @@ include_once("src/db/conexao.php"); //conexão com o banco de dados
                     <div class="form-group row">
                         <label for="nome" class="col-sm-2 col-form-label">Nome</label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" name="nome" id="nome" placeholder="Digite o nome do produto" required>
+                            <input type="text" class="form-control" name="nomeProduto" id="nome" placeholder="Digite o nome do produto" required>
                         </div>
                     </div>
 
@@ -139,7 +142,7 @@ include_once("src/db/conexao.php"); //conexão com o banco de dados
                     </div>
 
                     <div class="form-group row">
-                        <label for="categoria_id" class="col-sm-2 col-form-label">Subcategoria</label>
+                        <label for="categoria_id" class="col-sm-2 col-form-label">Categoria</label>
                         <div class="col-sm-10">
                             <select class="form-control" name="categoria_id" id="categoria_id" required>
                                 <option value="eugenio">eugenio</option>

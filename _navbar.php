@@ -38,6 +38,7 @@
                     </li>
                     <li>
                         <button>
+                            <a href="index.php">
                             <svg fill="#000000" width="30px" height="30px" viewBox="0 -3.84 122.88 122.88" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="enable-background:new 0 0 122.88 115.21" xml:space="preserve">
                                 <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                                 <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
@@ -48,6 +49,7 @@
                                 </g>
                             </svg>
                             <span><b>Cardapio</b></span>
+                            </a>
                         </button>
                     </li>
                     <li>
