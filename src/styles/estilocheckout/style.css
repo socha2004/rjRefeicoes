@@ -1,0 +1,109 @@
+body{
+    font-family: "inria-sans-light", sans-serif;
+    background-color: #d9d9d9;
+}
+
+main{
+    font-family: "inria-sans-light", sans-serif;
+    background-color: #d9d9d9;
+}
+
+.nav-item{
+    font-size: 20px;
+    font-weight: 400px;
+}
+
+.menu-topo{
+    background-color: #B10005;
+    color: #fff;
+}
+
+.logo{
+    width: 136px;
+    height: 136px;
+}
+
+.cardapio-area{
+    background-color: #d9d9d9;
+}
+
+.menu-area{
+    margin-top: 2%;
+    border-top: 2px solid black;
+    border-bottom:1px solid black ;
+    border-right:1px solid black ;
+    border-left:1px solid black ;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+
+ .img-produto{
+    max-width: 150px;
+    max-height: 150px;
+    border-radius: 5px;
+    box-shadow: 20px 8px 23px -7px rgba(0,0,0,0.75);
+ }
+
+ .link{
+    text-decoration: none;
+    color: #000;
+    font-weight: 0;
+ }
+
+ .logocheckout {
+    text-align: center;
+ }
+
+ .box {
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: white;
+    padding: 15px;
+    border-radius: 15px;
+ }
+
+ .inputBox {
+    position: relative;
+ }
+
+ .inputNome {
+    font-size: 15px;
+    width: 100%;
+    letter-spacing: 2px;
+    border-radius: 5px;
+ }
+
+ .inputBairro {
+    font-size: 15px;
+    width: 100%;
+    letter-spacing: 2px;
+    border-radius: 5px;
+ }
+
+ .inputRua {
+    font-size: 15px;
+    width: 100%;
+    letter-spacing: 2px;
+    border-radius: 5px;
+ }
+
+ .inputNumero {
+    font-size: 15px;
+    width: 100%;
+    letter-spacing: 2px;
+    border-radius: 5px;
+ }
+
+ .inputTelefone {
+    font-size: 15px;
+    width: 100%;
+    letter-spacing: 2px;
+    border-radius: 5px;
+ }
+
+ input::placeholder {
+    text-align: center;
+ }
