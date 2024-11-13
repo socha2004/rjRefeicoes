@@ -1,0 +1,28 @@
+ .modal-dialog {
+     position: relative;
+     width: 400px;
+     bottom: 150px;
+     left: 750px;
+
+ }
+
+
+
+
+ .modal-content {
+    height: 500px;
+    width: 500px;
+ }
+
+
+ .modal-header {
+     background-color: #B10005;
+     
+     
+
+ }
+
+ .modal-tittle {
+     margin-left: 130px;
+     font-family: 'Times New Roman', Times, serif;
+ }
