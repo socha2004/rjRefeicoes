@@ -1,6 +1,8 @@
 /* From Uiverse.io by Galahhad */ 
 /* The design is inspired from the mockapi.io */
-
+.link:hover{
+  text-decoration: none;
+}
 .popup {
     --burger-line-width: 1.125em;
     --burger-line-height: 0.125em;

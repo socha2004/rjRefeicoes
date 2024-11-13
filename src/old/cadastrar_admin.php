@@ -7,7 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="src/styles/estiloIndex/estilo.css" type="text/css">
-    <title>Login - Admin</title>
+    <title>Cadastrar Administrador</title>
 </head>
 
 <body>
@@ -24,19 +24,40 @@
             </a>
         </div>
     </header>
-    <div class="form-wraper">
-        <form method="post" class="login-form" action="src/php/login.php"> 
+    <div class="form-admin">
+        <form method="post" class="login-form" action="#">
             <div class="header-form">
-                <h2 class="titulo-login">Login no Sistema</h2>
+                <h2 class="titulo-login">Cadastro de Administrador</h2>
             </div>
+            <hr>
+            <label for="nome">Primeiro nome:</label>
+            <input type="text" name="nome">
+
+            <label for="sobrenome">Sobrenome:</label>
+            <input type="text" name="sobrenome">
 
             <label for="usuario">Usuário:</label>
-            <input type="text" name="usuario">
-
-            <label for="senha">Senha:</label>
+            <div>
+                <button class="button-admin">Gerar usuário</button>
+                <input type="text" name="usuario" id="usuario">
+            </div>
+            
+            
+            <label for="cargo">Cargo:</label>
+            <select name="cargo" id="cargo">
+                <option value="proprietario">--Escolha um cargo--</option>
+                <option value="proprietario">Proprietario</option>
+                <option value="desenvolvedor">Desenvolvedor</option>
+                <option value="tecnico">Técnico de Suporte</option>
+            </select>
+            <hr>
+            <label for="senha">Senha do usuário</label>
             <input type="password" name="senha">
 
-            <input type="submit" value="Acessar">
+            <label for="cSenha">Confirme a senha:</label>
+            <input type="password" name="cSenha">
+
+            <input type="submit" value="Cadastrar">
         </form>
     </div>
 </body>
