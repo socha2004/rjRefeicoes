@@ -15,13 +15,24 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $status_produto = $_POST['status_produto'];
     $tipo_produto = mysqli_real_escape_string($conn, $_POST['tipo_produto']);
     $qtd_pessoas = $_POST['qtd_pessoas'];
+    $imagem_produto = $_FILES["imagem_produto"];
+    $nomeImagem = basename($imagem_produto["name"]);
+    $localImagem = "uploads/" . $nomeImagem;
 
-    $query = "INSERT INTO produto (nome_produto, preco_produto, descricao_produto, imagem_produto, tipo_produto, qtd_pessoas, status_produto) 
+    if (move_uploaded_file($imagem_produto["tmp_name"], $localImagem)) {
+        $query = "INSERT INTO produto (nome_produto, preco_produto, descricao_produto, imagem_produto, tipo_produto, qtd_pessoas, status_produto) 
     VALUES (?, ?, ?, ?, ?, ?, ?)";
 
-    $stmt = mysqli_prepare($conn, $query);
-    mysqli_stmt_bind_param($stmt, 'sssssss', $nome_produto, $preco_produto, $descricao_curta, $newFileName, $tipo_produto, $qtd_pessoas, $status_produto);
-    mysqli_stmt_execute($stmt);
+        $stmt = mysqli_prepare($conn, $query);
+        mysqli_stmt_bind_param($stmt, 'sssssss', $nome_produto, $preco_produto, $descricao_curta, $localImagem, $tipo_produto, $qtd_pessoas, $status_produto);
+        if (mysqli_stmt_execute($stmt)) {
+            echo "<script>
+            alert('Produto cadastrado com sucesso!')
+          </script>";
+        }
+    }
+
+
 
     // Tratamento de upload de arquivos
     // if (isset($_FILES['arquivo']) && $_FILES['arquivo']['error'] == 0) {
@@ -110,14 +121,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                             <input type="text" class="form-control" name="nome_produto" id="nome" placeholder="Digite o nome do produto" required>
                         </div>
                     </div>
-
-                    <!-- <div class="form-group row">
+                    <div class="form-group row">
                         <label for="arquivo" class="col-sm-2 col-form-label">Foto do Produto</label>
                         <div class="col-sm-10">
-                            <input type="file" class="form-control-file" name="arquivo" id="arquivo" >
+                            <input type="file" class="form-control-file" name="imagem_produto" id="arquivo">
                             <small class="form-text text-muted">Apenas imagens JPG, PNG ou GIF (máx. 5MB)</small>
                         </div>
-                    </div> -->
+                    </div>
 
                     <div class="form-group row">
                         <label for="preco" class="col-sm-2 col-form-label">Preço</label>
@@ -158,8 +168,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                         <label for="tipo_produto" class="col-sm-2 col-form-label">Categoria</label>
                         <div class="col-sm-10">
                             <select class="form-control" name="tipo_produto" id="tipo_produto" required>
-                                <option value="eugenio">eugenio</option>
-                                <option value="juci">juci</option>
+                                <option value="eugenio">Refeição</option>
+                                <option value="juci">Sobremesa</option>
+                                <option value="juci">Suco</option>
+                                <option value="juci">Refrigerante</option>
                             </select>
                         </div>
                     </div>
@@ -175,7 +187,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             </div>
         </div>
     </main>
-
+    <script>
+        // Função para exibir notificação de sucesso
+        function notificarSucesso() {
+            $.notify("Produto cadastrado com sucesso!", "success");
+        }
+    </script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
 </body>

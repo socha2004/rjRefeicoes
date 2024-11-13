@@ -98,13 +98,31 @@ $_SESSION['admin'] = "eugenio";
                         </div>
                         </div>";
                 }
+                echo " <div class='modal fade' id='modalCarrinho' tabindex='-1' aria-labelledby=''Label' aria-hidden='true'>
+                            <div class='modal-dialog modal-dialog-centered'>
+                                <div class='modal-content'>
+                                    <div class='modal-header'>
+                                        <h5 class='modal-title' id='Label'>Adicionar ao carrinho</h5>
+                                        <button type='button' class='btn-close' data-bs-dismiss='modal' aria-label='Fechar'></button>
+                                    </div>
+                                    <div class='modal-body'>
+                                        <!-- Conteúdo detalhado do prato -->
+                                        <p><b>Descrição:</b> </p>
+                                        <p><b>Tipo de refeição:</b> </p>
+                                        <p><b>Preço:</b> </p>
+                                    </div>
+                                <div class='modal-footer'>
+                                    <button type='button' class='btn btn-secondary' data-bs-dismiss='modal'>Fechar</button>
+                                </div>
+                            </div>
+                        </div>";
             } else {
                 echo "<h2>Sem lanches no momento!</h2>";
             }
 
             mysqli_close($conn);
             ?>
-
+           
         </div>
     </main>
     <script src="src/js/filtroProdutos.js"></script>
