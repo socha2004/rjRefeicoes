@@ -1,5 +1,5 @@
 const navItems = document.querySelectorAll(".nav-item");
-const cardProduto = document.querySelectorAll(".card");
+const cardProduto = document.querySelectorAll(".card-produto");
 const botaoReset = document.querySelector(".navbar-brand");
 
 function filtrarProdutos(categoria) {
@@ -13,9 +13,7 @@ function filtrarProdutos(categoria) {
     });
   }
   
-  botaoReset.addEventListener('click', () => {
-    filtrarProdutos('all');
-  });
+  
 
   // Adiciona o evento de clique a cada nav-item
   navItems.forEach(item => {
@@ -25,6 +23,8 @@ function filtrarProdutos(categoria) {
     });
   });
 
-  botaoReset.addEventListener("click", resetaFiltro());
+  botaoReset.addEventListener('click', () => {
+    filtrarProdutos('all');
+  });
 
  

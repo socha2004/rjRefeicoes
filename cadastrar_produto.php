@@ -27,57 +27,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         mysqli_stmt_bind_param($stmt, 'sssssss', $nome_produto, $preco_produto, $descricao_curta, $localImagem, $tipo_produto, $qtd_pessoas, $status_produto);
         if (mysqli_stmt_execute($stmt)) {
             echo "<script>
-            alert('Produto cadastrado com sucesso!')
+            notificarSucesso();
           </script>";
         }
     }
-
-
-
-    // Tratamento de upload de arquivos
-    // if (isset($_FILES['arquivo']) && $_FILES['arquivo']['error'] == 0) {
-    //     $fileTmpPath = $_FILES['arquivo']['tmp_name'];
-    //     $fileName = $_FILES['arquivo']['name'];
-    //     $fileSize = $_FILES['arquivo']['size'];
-    //     $fileType = $_FILES['arquivo']['type'];
-
-    //     //            tipos de arquivos permitidos
-    //     $allowedTypes = ['image/jpeg', 'image/png', 'image/gif'];
-
-    //     // Verifique o tipo e tamanho do arquivo
-    //     if (in_array($fileType, $allowedTypes) && $fileSize <= 5000000) { // max 5MB
-    //         $newFileName = uniqid() . "_" . basename($fileName);
-    //         $uploadDir = 'uploads/';
-    //         $fileDest = $uploadDir . $newFileName;
-
-
-
-    //         if (move_uploaded_file($fileTmpPath, $fileDest)) {
-    //             //Salve os dados no banco de dados após o upload do arquivo com sucesso
-    //             $status = isset($_POST['status']) ? $_POST['status'] : 'Disponível'; // default 'Disponível'
-    //             $query = "INSERT INTO produto (nome_produto, preco_produto, descricao_produto, imagem_produto, tipo_produto, qtd_pessoas, status_produto) 
-    //                       VALUES (?, ?, ?, ?, ?, ?, ?)";
-
-    //             $stmt = mysqli_prepare($conn, $query);
-    //             mysqli_stmt_bind_param($stmt, 'sssssss', $nome_produto, $preco_produto, $descricao_curta, $newFileName, $tipo_produto, $qtd_pessoas, $status);
-
-    //             if (mysqli_stmt_execute($stmt)) {
-    //                 $_SESSION['message'] = 'Produto cadastrado com sucesso!';
-    //                 // header('Location: success_page.php'); //redireciona após sucesso
-    //             } else {
-    //                 $_SESSION['message'] = 'Erro ao cadastrar produto!';
-    //             }
-
-    //             mysqli_stmt_close($stmt);
-    //         } else {
-    //             $_SESSION['message'] = 'Erro ao fazer upload da imagem.';
-    //         }
-    //     } else {
-    //         $_SESSION['message'] = 'Arquivo inválido. Apenas imagens JPG, PNG e GIF são permitidas, com no máximo 5MB.';
-    //     }
-    // } else {
-    //     $_SESSION['message'] = 'Nenhuma imagem foi selecionada ou houve erro no envio.';
-    // }
 }
 ?>
 
@@ -168,10 +121,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                         <label for="tipo_produto" class="col-sm-2 col-form-label">Categoria</label>
                         <div class="col-sm-10">
                             <select class="form-control" name="tipo_produto" id="tipo_produto" required>
-                                <option value="refeicao">Refeição</option>
-                                <option value="sobremesa">Sobremesa</option>
-                                <option value="suco">Suco</option>
-                                <option value="refrigerante">Refrigerante</option>
+                                <option value="Almoço">Refeição</option>
+                                <option value="Sobremesa">Sobremesa</option>
+                                <option value="Sucos">Suco</option>
+                                <option value="Refrigerante">Refrigerante</option>
                             </select>
                         </div>
                     </div>
@@ -180,9 +133,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                             <button type="submit" class="btn btn-success btn-lg">Salvar</button>
                         </div>
                     </div>
-
-
-
                 </form>
             </div>
         </div>
@@ -194,6 +144,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         }
     </script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="src/js/notify.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
 </body>
 
