@@ -1,6 +1,6 @@
 <?php
 session_start();
-$_SESSION['admin'] = "eugenio";
+
 ?>
 
 <!DOCTYPE html>
@@ -14,7 +14,10 @@ $_SESSION['admin'] = "eugenio";
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="src/styles/estiloIndex/estilo.css" type="text/css">
     <link rel="stylesheet" href="src/styles/menuIndex/estilo.css">
+    <link rel="stylesheet" href="src/styles/estiloCarrinho/estilo.css">
+
     <script src="https://kit.fontawesome.com/4a5dfc2a50.js" crossorigin="anonymous"></script>
+
 
     <style>
         .cabecalho {
@@ -84,7 +87,7 @@ $_SESSION['admin'] = "eugenio";
                 </div>
             </div>
         </nav>
-        <div class="container-md menu-area wrap d-flex justify-content-center">
+        <div class="container-md menu-area wrap d-flex justify-content-around">
             <!--ENVOLVER OS CARDS AQUI!!!-->
             <?php
             include("src/db/conexao.php");
@@ -95,12 +98,12 @@ $_SESSION['admin'] = "eugenio";
             if ($resultado->num_rows > 0) {
                 while ($linha = $resultado->fetch_assoc()) {
                     $modalId = "detalhesPratoModal" . $linha['id_produto'];
-                    echo "<div class='card card-produto' style='width:18rem; min-width:200px;' data-category='$linha[tipo_produto]'>
+                    echo "<div class='card' style='width:18rem;' data-category='$linha[tipo_produto]'>
                             <img class='card-img-top' src='$linha[imagem_produto]' alt='Card image cap' style='max-height:190px;'>
                             <h5 class='card-title p-1'>$linha[nome_produto]</h5>
                             <div class='card-body'>
                                 <p class='card-text'>Serve <b>$linha[qtd_pessoas] pessoas</b></p>
-                                <p class='card-text'><b>Preço:</b> R$$linha[preco_produto]</p>
+                                <p class='card-text'><b>Preço:</b> $linha[preco_produto]</p>
                                 <button type='button' class='btn btn-success' data-bs-toggle='modal' data-bs-target='#modalCarrinho'>Comprar</button>
                                 <button type='button' class='btn btn-primary' data-bs-toggle='modal' data-bs-target='#$modalId'>Detalhes</button>
                             </div>
@@ -117,7 +120,7 @@ $_SESSION['admin'] = "eugenio";
                                         <!-- Conteúdo detalhado do prato -->
                                         <p><b>Descrição:</b> $linha[descricao_produto]</p>
                                         <p><b>Tipo de refeição:</b> $linha[tipo_produto]</p>
-                                        <p><b>Preço:</b> R$$linha[preco_produto]</p>
+                                        <p><b>Preço:</b> $linha[preco_produto]</p>
                                     </div>
                                 <div class='modal-footer'>
                                     <button type='button' class='btn btn-secondary' data-bs-dismiss='modal'>Fechar</button>
@@ -156,6 +159,7 @@ $_SESSION['admin'] = "eugenio";
 
             mysqli_close($conn);
             ?>
+
 
         </div>
     </main>
