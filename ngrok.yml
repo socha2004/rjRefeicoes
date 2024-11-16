@@ -1,0 +1,13 @@
+version: "3"
+agent:
+  authtoken: 2om4ELB99GMOZMA2PWJ0gvQ1RID_4st3Pg99PZgNV4xswYWEW
+tunnels:
+  rjrefeicoes:
+    addr: 80
+    proto: http
+  next:
+    addr: 3333
+    proto: http
+  mysql:
+    addr: 3306
+    proto: tcp

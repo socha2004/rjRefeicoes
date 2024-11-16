@@ -1,5 +1,5 @@
 const navItems = document.querySelectorAll(".nav-item");
-const cardProduto = document.querySelectorAll(".card-produto");
+const cardProduto = document.querySelectorAll(".card");
 const botaoReset = document.querySelector(".navbar-brand");
 
 function filtrarProdutos(categoria) {

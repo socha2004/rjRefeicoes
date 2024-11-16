@@ -72,7 +72,7 @@ session_start();
                 </div>
             </div>
         </div>
-        
+
         <nav class="navbar navbar-expand-lg navbar-light bg-light p-1">
             <a class="navbar-brand" href="#">Menu de Refeições</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -80,7 +80,7 @@ session_start();
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    <a class="nav-item nav-link" href="#" data-category="lanche">Pratos do Dia</a>
+                    <a class="nav-item nav-link" href="#" data-category="refeicao">Pratos do Dia</a>
                     <a class="nav-item nav-link" href="#" data-category="sobremesa">Sobremesa</a>
                     <a class="nav-item nav-link" href="#" data-category="refrigerante">Refrigerante</a>
                     <a class="nav-item nav-link" href="#" data-category="suco">Sucos</a>
@@ -129,30 +129,6 @@ session_start();
                         </div>
                         </div>";
                 }
-                echo " <div class='modal fade' id='modalCarrinho' tabindex='-1' aria-labelledby=''Label' aria-hidden='true'>
-                            <div class='modal-dialog modal-dialog-centered'>
-                                <div class='modal-content'>
-                                    <div class='modal-header'>
-                                        <h5 class='modal-title' id='Label'>Adicionar ao carrinho</h5>
-                                        <button type='button' class='btn-close' data-bs-dismiss='modal' aria-label='Fechar'></button>
-                                    </div>
-                                    <div class='modal-body'>
-                                        <!-- Conteúdo detalhado do prato -->
-                                       <p><strong>Produto:</strong><span></span></p> 
-                                       <p><strong>Preço:</strong><span></span></p> 
-                                       <h6>Quantidade a ser comprada:</h6>
-                                       <input type='number' class='form-control'>
-                                       <h6>Observação no produto:</h6>
-                                       <input type='text' class='form-control'>
-                                       <br>
-                                       <h5>Preço total: <span></span></h5>
-                                    </div>
-                                <div class='modal-footer'>
-                                    <button type='button' class='btn btn-secondary' data-bs-dismiss='modal'>Fechar</button>
-                                    <button type='button' class='btn btn-success' data-bs-dismiss='modal'>Adicionar</button>
-                                </div>
-                            </div>
-                        </div>";
             } else {
                 echo "<h2>Sem lanches no momento!</h2>";
             }
@@ -160,8 +136,31 @@ session_start();
             mysqli_close($conn);
             ?>
 
-
-        </div>
+            <div class='modal fade' id='modalCarrinho' tabindex='-1' aria-labelledby='' Label' aria-hidden='true'>
+                <div class='modal-dialog modal-dialog-centered'>
+                    <div class='modal-content'>
+                        <div class='modal-header'>
+                            <h5 class='modal-title' id='Label'>Adicionar ao carrinho</h5>
+                            <button type='button' class='btn-close' data-bs-dismiss='modal' aria-label='Fechar'></button>
+                        </div>
+                        <div class='modal-body'>
+                            <!-- Conteúdo detalhado do prato -->
+                            <p><strong>Produto:</strong><span></span></p>
+                            <p><strong>Preço:</strong><span></span></p>
+                            <h6>Quantidade a ser comprada:</h6>
+                            <input type='number' class='form-control'>
+                            <h6>Observação no produto:</h6>
+                            <input type='text' class='form-control'>
+                            <br>
+                            <h5>Preço total: <span></span></h5>
+                        </div>
+                        <div class='modal-footer'>
+                            <button type='button' class='btn btn-secondary' data-bs-dismiss='modal'>Fechar</button>
+                            <button type='button' class='btn btn-success' data-bs-dismiss='modal'>Adicionar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
     </main>
     <script src="src/js/filtroProdutos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"

@@ -1,7 +1,7 @@
 <?php
 // Inicia a sessão e inclui o arquivo de segurança
 
-// GET: http://localhost/rjrefeicoes/cadastrar_produto.php
+// GET: http://localhost/rjRefeicoes/cadastrar_produto.php
 
 session_start();
 include_once("src/db/conexao.php"); //conexão com o banco de dados
@@ -121,10 +121,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                         <label for="tipo_produto" class="col-sm-2 col-form-label">Categoria</label>
                         <div class="col-sm-10">
                             <select class="form-control" name="tipo_produto" id="tipo_produto" required>
-                                <option value="Almoço">Refeição</option>
-                                <option value="Sobremesa">Sobremesa</option>
-                                <option value="Sucos">Suco</option>
-                                <option value="Refrigerante">Refrigerante</option>
+                                <option value="refeicao">Refeição</option>
+                                <option value="sobremesa">Sobremesa</option>
+                                <option value="suco">Suco</option>
+                                <option value="refrigerante">Refrigerante</option>
                             </select>
                         </div>
                     </div>

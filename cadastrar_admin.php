@@ -1,7 +1,7 @@
 <?php
 // Inicia a sessão e inclui o arquivo de segurança
 
-// GET: http://localhost/rjrefeicoes/cadastrar_produto.php
+// GET: http://localhost/rjRefeicoes/cadastrar_produto.php
 
 session_start();
 include_once("src/db/conexao.php"); //conexão com o banco de dados
