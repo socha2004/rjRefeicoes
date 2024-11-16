@@ -1,7 +1,5 @@
 <?php
-session_start();
-
-   
+ 
 ?>
 
 <!DOCTYPE html>
@@ -176,7 +174,7 @@ session_start();
             </div>
         </div>
 
-        <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #8b0000;">
+        <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #B10005;">
     <a class="navbar-brand" href="#">Menu de Refeições</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
