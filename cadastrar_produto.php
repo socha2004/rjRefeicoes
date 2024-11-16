@@ -1,14 +1,8 @@
 <?php
-// Inicia a sessão e inclui o arquivo de segurança
-
-// GET: http://localhost/rjRefeicoes/cadastrar_produto.php
-
 session_start();
-include_once("src/db/conexao.php"); //conexão com o banco de dados
+include_once("src/db/conexao.php");
 
-// Processa o envio do formulário se a solicitação POST for feita
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    // Limpe e valide os dados do formulário
     $nome_produto = $_POST['nome_produto'];
     $preco_produto = $_POST['preco_produto'];
     $descricao_curta = mysqli_real_escape_string($conn, $_POST['descricao_produto']);
@@ -21,14 +15,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     if (move_uploaded_file($imagem_produto["tmp_name"], $localImagem)) {
         $query = "INSERT INTO produto (nome_produto, preco_produto, descricao_produto, imagem_produto, tipo_produto, qtd_pessoas, status_produto) 
-    VALUES (?, ?, ?, ?, ?, ?, ?)";
+        VALUES (?, ?, ?, ?, ?, ?, ?)";
 
         $stmt = mysqli_prepare($conn, $query);
         mysqli_stmt_bind_param($stmt, 'sssssss', $nome_produto, $preco_produto, $descricao_curta, $localImagem, $tipo_produto, $qtd_pessoas, $status_produto);
         if (mysqli_stmt_execute($stmt)) {
             echo "<script>
-            notificarSucesso();
-          </script>";
+                notificarSucesso();
+            </script>";
         }
     }
 }
@@ -46,7 +40,39 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <style>
         body {
-            background-color: #000;
+            background-color: #f4f4f4;
+        }
+        .card-cadastro-produto {
+            background-color: #fff;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+        }
+        .card-header {
+            background-color: #d9534f;
+            color: white;
+            border-radius: 10px;
+            text-align: center;
+            padding: 20px;
+        }
+        .form-control {
+            border-radius: 10px;
+        }
+        .btn-success {
+            background-color: #5cb85c;
+            border-color: #4cae4c;
+            border-radius: 10px;
+        }
+        .form-group label {
+            font-weight: bold;
+        }
+        .form-text {
+            font-size: 0.9rem;
+            color: #6c757d;
+        }
+        .alert {
+            border-radius: 10px;
+            margin-top: 10px;
         }
     </style>
 </head>
@@ -57,16 +83,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <main role="main" class="container mt-5">
         <div class="card-cadastro-produto">
             <div class="card-header">
-                <h1 class="text-center text-uppercase" style="text-decoration: underline">Cadastrar Produto</h1>
+                <h1 class="text-uppercase">Cadastrar Produto</h1>
             </div>
             <div class="card-body">
-                <!-- <?php
-                        if (isset($_SESSION['message'])) {
-                            echo '<div class="alert alert-info" role="alert">' . $_SESSION['message'] . '</div>';
-                            unset($_SESSION['message']);
-                        }
-                        ?> -->
-
                 <form method="POST" action="" enctype="multipart/form-data">
                     <div class="form-group row">
                         <label for="nome" class="col-sm-2 col-form-label">Nome</label>
@@ -77,7 +96,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     <div class="form-group row">
                         <label for="arquivo" class="col-sm-2 col-form-label">Foto do Produto</label>
                         <div class="col-sm-10">
-                            <input type="file" class="form-control-file" name="imagem_produto" id="arquivo">
+                            <input type="file" class="form-control-file" name="imagem_produto" id="arquivo" required>
                             <small class="form-text text-muted">Apenas imagens JPG, PNG ou GIF (máx. 5MB)</small>
                         </div>
                     </div>
@@ -97,7 +116,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     </div>
 
                     <div class="form-group row">
-                        <label for="qtd_pessoas" class="col-sm-2 col-form-label">Quantidade de pessoas a serem servidas: </label>
+                        <label for="qtd_pessoas" class="col-sm-2 col-form-label">Qtd. Pessoas</label>
                         <div class="col-sm-10">
                             <input type="number" name="qtd_pessoas" id="qtd_pessoas" class="form-control">
                         </div>
@@ -130,13 +149,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     </div>
                     <div class="form-group row">
                         <div class="col-sm-5">
-                            <button type="submit" class="btn btn-success btn-lg">Salvar</button>
+                            <button type="submit" class="btn btn-success btn-lg btn-block">Salvar</button>
                         </div>
                     </div>
                 </form>
             </div>
         </div>
     </main>
+
     <script>
         // Função para exibir notificação de sucesso
         function notificarSucesso() {
