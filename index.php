@@ -203,37 +203,40 @@
                     $modalIdLabel = $modalId . "Label"; // Adicionando a definição da variável modalIdLabel
                 
                     $modalId = "detalhesPratoModal" . $linha['id_produto'];
-                    echo "
-                            <div class='card' style='width:18rem; min-width: 200px;' data-category='$linha[tipo_produto]'>
-                                <img class='card-img-top' src='$linha[imagem_produto]' alt='Card image cap' style='max-height:190px;'>
-                                <h5 class='card-title p-1'>$linha[nome_produto]</h5>
-                                <div class='card-body'>
-                                    <p class='card-text'>Serve <b>$linha[qtd_pessoas] pessoas</b></p>
-                                    <p class='card-text'><b>Preço:</b> $linha[preco_produto]</p>
-                                    <button type='button' class='btn btn-success' data-bs-toggle='modal' data-bs-target='#modalCarrinho'>Comprar</button>
-                                    <button type='button' class='btn btn-primary' data-bs-toggle='modal' data-bs-target='#$modalId'>Detalhes</button>
-                                </div>
-                            </div>
-                       
+                    if($linha["status_produto"] == "Disponível"){
 
-                        <div class='modal fade' id='$modalId' tabindex='-1' aria-labelledby='$modalIdLabel' aria-hidden='true'>
-                            <div class='modal-dialog modal-dialog-centered'>
-                                <div class='modal-content'>
-                                    <div class='modal-header'>
-                                        <h5 class='modal-title' id='$modalIdLabel'>$linha[nome_produto]</h5>
-                                        <button type='button' class='btn-close' data-bs-dismiss='modal' aria-label='Fechar'></button>
-                                    </div>
-                                    <div class='modal-body'>
-                                        <p><b>Descrição:</b> $linha[descricao_produto]</p>
-                                        <p><b>Tipo de refeição:</b> $linha[tipo_produto]</p>
-                                        <p><b>Preço:</b> $linha[preco_produto]</p>
-                                    </div>
-                                    <div class='modal-footer'>
-                                        <button type='button' class='btn btn-secondary' data-bs-dismiss='modal'>Fechar</button>
+                        echo "
+                                <div class='card' style='width:18rem; min-width: 200px;' data-category='$linha[tipo_produto]'>
+                                    <img class='card-img-top' src='$linha[imagem_produto]' alt='Card image cap' style='max-height:190px;'>
+                                    <h5 class='card-title p-1'>$linha[nome_produto]</h5>
+                                    <div class='card-body'>
+                                        <p class='card-text'>Serve <b>$linha[qtd_pessoas] pessoas</b></p>
+                                        <p class='card-text'><b>Preço:</b> $linha[preco_produto]</p>
+                                        <button type='button' class='btn btn-success' data-bs-toggle='modal' data-bs-target='#modalCarrinho'>Comprar</button>
+                                        <button type='button' class='btn btn-primary' data-bs-toggle='modal' data-bs-target='#$modalId'>Detalhes</button>
                                     </div>
                                 </div>
-                            </div>
-                        </div>";
+                           
+    
+                            <div class='modal fade' id='$modalId' tabindex='-1' aria-labelledby='$modalIdLabel' aria-hidden='true'>
+                                <div class='modal-dialog modal-dialog-centered'>
+                                    <div class='modal-content'>
+                                        <div class='modal-header'>
+                                            <h5 class='modal-title' id='$modalIdLabel'>$linha[nome_produto]</h5>
+                                            <button type='button' class='btn-close' data-bs-dismiss='modal' aria-label='Fechar'></button>
+                                        </div>
+                                        <div class='modal-body'>
+                                            <p><b>Descrição:</b> $linha[descricao_produto]</p>
+                                            <p><b>Tipo de refeição:</b> $linha[tipo_produto]</p>
+                                            <p><b>Preço:</b> $linha[preco_produto]</p>
+                                        </div>
+                                        <div class='modal-footer'>
+                                            <button type='button' class='btn btn-secondary' data-bs-dismiss='modal'>Fechar</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>";
+                    }
                 }
             }
             ?>
