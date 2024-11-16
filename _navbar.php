@@ -40,7 +40,7 @@
                                             <path d="M14 12C14 10.3431 12.6569 9 11 9H5C3.34315 9 2 10.3431 2 12V15H14V12Z" fill="#000000"></path>
                                         </g>
                                     </svg>
-                                    <span><b>Login Administrador</b></span>
+                                    <span><b>Área Restrita</b></span>
                                 </a>
                             </button>
                         </li>
