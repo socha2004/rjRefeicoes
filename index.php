@@ -141,7 +141,7 @@
             <img src="src/assets/imagens/logo.png" alt="Logo" class="logo">
             <div class="d-flex flex-column">
                 <h1>R&J Refeições</h1>
-                <i class="fa-solid fa-location-dot"> Rua Túlio, 130</i>
+                <i class="fa-solid fa-location-dot"> R. Tulio, 130</i>
                 <span class="displayLoja">Aberto para pedidos!</span>
             </div>
         </div>
