@@ -7,6 +7,8 @@ session_start();
 <html lang="pt-br">
 
 <head>
+<!--//Testando integração com GitHub pelo VS Code-->
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RJ Refeições</title>

@@ -1,0 +1,154 @@
+[33mcommit 5f1ac75372f7803b979d1667da8073285872abd2[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32meugenio[m[33m)[m
+Author: Victor <victorbreno.douran@gmail.com>
+Date:   Fri Nov 15 22:12:03 2024 -0400
+
+    Adicionado configurações negrok e alterações de autenticação no servidor de Banco de Dados, localmente e em nuvem
+
+[33mcommit 5ce95a501817a2ac8e9e4ab05f8a8a076b117e27[m[33m ([m[1;31morigin/eugenio[m[33m)[m
+Merge: e3517c4 c95480b
+Author: Eugenio - PC Casa <eugenio.socha2004@gmail.com>
+Date:   Thu Nov 14 17:39:03 2024 -0400
+
+    Resolução de conflitos
+
+[33mcommit e3517c470740da26383ecbaa68324cf7f1ff22b8[m
+Author: Eugenio - PC Casa <eugenio.socha2004@gmail.com>
+Date:   Thu Nov 14 17:31:11 2024 -0400
+
+    Add modal carrinho,  add modal de adicionar ao carrinho
+
+[33mcommit c95480b34589ba6e3c765cfa64c706285965a9d6[m
+Merge: 353ee64 5698de7
+Author: EfN152004 <eliasfelix204@gmail.com>
+Date:   Wed Nov 13 16:54:07 2024 -0300
+
+    Add modal carrinho
+
+[33mcommit 353ee6424e9c5188bd4b3af9039e9611aa398451[m
+Author: EfN152004 <eliasfelix204@gmail.com>
+Date:   Wed Nov 13 16:36:55 2024 -0300
+
+    carrinho adicionado!!
+
+[33mcommit 5698de7a2bfaa9e83e72e692f77d32ebc85f233d[m
+Author: Eugenio Socha <eugenio.socha2004@gmail.com>
+Date:   Wed Nov 13 11:38:38 2024 -0400
+
+    Fix responsividade da tela index e tela cadastro produto.
+
+[33mcommit aa32674ebe34b42afa6e934be4141c338e53851a[m
+Merge: e52e8c5 2206a06
+Author: Eugenio Socha <109106183+socha2004@users.noreply.github.com>
+Date:   Tue Nov 12 22:48:20 2024 -0400
+
+    Merge pull request #2 from socha2004/eugenio
+    
+    eugenio - homolog
+
+[33mcommit 2206a068d08b5f0725d8a8f2decc61f85d4c21ab[m
+Author: Eugenio - PC Casa <eugenio.socha2004@gmail.com>
+Date:   Tue Nov 12 22:44:57 2024 -0400
+
+    Fix tela de cadastro e inicio modal de adicionar ao carrinho
+
+[33mcommit eb7cc3d995330350b236060db2264dc335afd7e0[m
+Author: Eugenio Socha <eugenio.socha2004@gmail.com>
+Date:   Tue Nov 12 12:09:28 2024 -0400
+
+    Padronização navbar
+
+[33mcommit a5f6b471f9ade2a1efc18b221f9b6d13278ce910[m
+Author: Eugenio Socha <eugenio.socha2004@gmail.com>
+Date:   Tue Nov 12 09:05:58 2024 -0400
+
+    Fix tela cadastro de produto e adminstrador
+
+[33mcommit 6d21815262e8d3c8cbd4a4d113183f168f346698[m
+Author: Eugenio UNN <eugenio.socha2004@gmail.com>
+Date:   Mon Nov 11 13:57:58 2024 -0400
+
+    Fix tela cadastro de produto
+
+[33mcommit 2dc99efe1e02065488459b1941d1f291b3ce3652[m
+Author: Eugenio - PC Casa <eugenio.socha2004@gmail.com>
+Date:   Mon Nov 11 17:24:34 2024 -0400
+
+    Add telas de checkout, cadastro de produto e cadastro de admin.
+
+[33mcommit d775be280f07d99b2ef8c8a60e8ba27e971868cc[m
+Author: Eugenio - PC Casa <eugenio.socha2004@gmail.com>
+Date:   Sat Nov 9 00:32:56 2024 -0400
+
+    add filtro produto tela index
+
+[33mcommit efa0b6ed915f65002ea92a8d05f07b95c8e1cfff[m
+Author: Eugenio Socha <eugenio.socha2004@gmail.com>
+Date:   Fri Nov 8 12:08:02 2024 -0400
+
+    add funcionalidade de serve_pessoas
+
+[33mcommit 874bb583910d3147d5d9379eb6eba03f60caf8e4[m
+Author: Eugenio - PC Casa <eugenio.socha2004@gmail.com>
+Date:   Thu Nov 7 22:32:46 2024 -0400
+
+    add modal em cards
+
+[33mcommit c038a5dc14fdbce7a3304109f866c31479bfc002[m
+Author: Eugenio Socha <eugenio.socha2004@gmail.com>
+Date:   Thu Nov 7 12:16:30 2024 -0400
+
+    Ajuste tela index
+
+[33mcommit 989e8e7212cd3f50cf46f5a15a6c65a6fec400d4[m
+Author: Eugenio - PC Casa <eugenio.socha2004@gmail.com>
+Date:   Wed Nov 6 22:48:44 2024 -0400
+
+    Alteração de estrutura
+
+[33mcommit a21ab94c62d00cb0716db065dc2cecbfffc4a694[m
+Author: Eugenio - PC Casa <eugenio.socha2004@gmail.com>
+Date:   Wed Nov 6 22:36:30 2024 -0400
+
+    Bug fixes
+
+[33mcommit ca9be8351f68c294e5c582ec14eb239975461edf[m
+Author: eugenio socha <eugenio.socha2004@gmail.com>
+Date:   Wed Sep 18 23:17:26 2024 -0400
+
+    fix layout e estilização do mesmo, add imagens de logo e icones
+
+[33mcommit 888d345e8f169c711fa019e0c3374616714854e1[m
+Author: eugenio socha <eugenio.socha2004@gmail.com>
+Date:   Mon Sep 16 18:05:25 2024 -0400
+
+    Deifinida estrutura do html
+
+[33mcommit d1578acfb3af16090dc0dc4d729223cf440d59de[m
+Author: eugenio socha <eugenio.socha2004@gmail.com>
+Date:   Sat Sep 14 12:38:21 2024 -0400
+
+    Adicionado assets padrao, query DDL SQL e pagina index
+
+[33mcommit efa975a69e604dbfa2293a82d7266f59cad8eedf[m[33m ([m[1;31morigin/Victor[m[33m)[m
+Author: Victor Breno <164227996+vbrenox@users.noreply.github.com>
+Date:   Sat Sep 14 12:34:07 2024 -0400
+
+    Add files via upload
+
+[33mcommit ce07f800068054b13c504c77adce70b586f6f052[m
+Author: Victor Breno <164227996+vbrenox@users.noreply.github.com>
+Date:   Sat Sep 14 12:24:12 2024 -0400
+
+    Create BancoSQL
+
+[33mcommit b9b0a3bb6a6ea69a5a60885f0d2ceb67ea3aede5[m
+Author: Victor Breno <164227996+vbrenox@users.noreply.github.com>
+Date:   Sat Sep 14 12:23:01 2024 -0400
+
+    Create FrontBase.html
+
+[33mcommit e52e8c529f97ad304ce13f01e6ec9dead6bb5223[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/homolog[m[33m, [m[1;31morigin/Elias[m[33m, [m[1;32mmain[m[33m)[m
+Author: eugenio socha <eugenio.socha2004@gmail.com>
+Date:   Sat Sep 14 10:16:18 2024 -0400
+
+    Estrutura Inicial
