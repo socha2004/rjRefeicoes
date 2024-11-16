@@ -190,7 +190,7 @@
 </nav>
 
 
-        <div class="container-md menu-area">
+        <div class="menu-area d-flex justify-content-center">
             <?php
             include("src/db/conexao.php");
 
@@ -203,8 +203,8 @@
                     $modalIdLabel = $modalId . "Label"; // Adicionando a definição da variável modalIdLabel
                 
                     $modalId = "detalhesPratoModal" . $linha['id_produto'];
-                    echo "<div class='col-md-4 col-sm-6'>
-                            <div class='card' style='width:18rem;' data-category='$linha[tipo_produto]'>
+                    echo "
+                            <div class='card' style='width:18rem; min-width: 200px;' data-category='$linha[tipo_produto]'>
                                 <img class='card-img-top' src='$linha[imagem_produto]' alt='Card image cap' style='max-height:190px;'>
                                 <h5 class='card-title p-1'>$linha[nome_produto]</h5>
                                 <div class='card-body'>
@@ -214,7 +214,7 @@
                                     <button type='button' class='btn btn-primary' data-bs-toggle='modal' data-bs-target='#$modalId'>Detalhes</button>
                                 </div>
                             </div>
-                        </div>
+                       
 
                         <div class='modal fade' id='$modalId' tabindex='-1' aria-labelledby='$modalIdLabel' aria-hidden='true'>
                             <div class='modal-dialog modal-dialog-centered'>
@@ -230,8 +230,6 @@
                                     </div>
                                     <div class='modal-footer'>
                                         <button type='button' class='btn btn-secondary' data-bs-dismiss='modal'>Fechar</button>
-
-                                        <button type='button' class='btn btn-primary'>Adicionar ao Carrinho</button>
                                     </div>
                                 </div>
                             </div>
@@ -239,6 +237,31 @@
                 }
             }
             ?>
+            <div class='modal fade' id='modalCarrinho' tabindex='-1' aria-labelledby='' Label' aria-hidden='true'>
+                <div class='modal-dialog modal-dialog-centered'>
+                    <div class='modal-content'>
+                        <div class='modal-header'>
+                            <h5 class='modal-title' id='Label'>Adicionar ao carrinho</h5>
+                            <button type='button' class='btn-close' data-bs-dismiss='modal' aria-label='Fechar'></button>
+                        </div>
+                        <div class='modal-body'>
+                            <!-- Conteúdo detalhado do prato -->
+                            <p><strong>Produto:</strong><span></span></p>
+                            <p><strong>Preço:</strong><span></span></p>
+                            <h6>Quantidade a ser comprada:</h6>
+                            <input type='number' class='form-control'>
+                            <h6>Observação no produto:</h6>
+                            <input type='text' class='form-control'>
+                            <br>
+                            <h5>Preço total: <span></span></h5>
+                        </div>
+                        <div class='modal-footer'>
+                            <button type='button' class='btn btn-secondary' data-bs-dismiss='modal'>Fechar</button>
+                            <button type='button' class='btn btn-success' data-bs-dismiss='modal'>Adicionar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </main>
 
