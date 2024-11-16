@@ -79,8 +79,7 @@
                             </button>
                         </li>
                         <hr>
-                        <?php if (isset($_SESSION['admin']) && $_SESSION['admin'] == true): ?>
-                            <li>
+                            <!-- <li>
                                 <button>
                                     <a href="cadastrar_produto.php" class="link">
                                     <svg fill="#000000" xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 52 52" enable-background="new 0 0 52 52" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M43,9C33.6-0.3,18.4-0.3,9,9c-9.3,9.4-9.3,24.6,0,34c9.4,9.4,24.6,9.4,33.9,0C52.3,33.6,52.3,18.4,43,9z M42,28c0,0.6-0.4,1-1,1H30c-0.5,0-1,0.5-1,1v11c0,0.5-0.5,1-1,1h-4c-0.6,0-1-0.4-1-1V30c0-0.6-0.4-1-1-1H11c-0.6,0-1-0.4-1-1v-4 c0-0.5,0.5-1,1-1h11c0.6,0,1-0.4,1-1V11c0-0.5,0.5-1,1-1h4c0.5,0,1,0.4,1,1v11c0,0.6,0.4,1,1,1h11c0.5,0,1,0.5,1,1V28z"></path> </g></svg>
@@ -102,8 +101,7 @@
                                 <svg width="30px" height="30px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M15 16.5V19C15 20.1046 14.1046 21 13 21H6C4.89543 21 4 20.1046 4 19V5C4 3.89543 4.89543 3 6 3H13C14.1046 3 15 3.89543 15 5V8.0625M11 12H21M21 12L18.5 9.5M21 12L18.5 14.5" stroke="#fa0000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
                                     <span>Logoff</span>
                                 </button>
-                            </li>
-                        <?php endif ?>
+                            </li> -->
                     </ul>
                 </nav>
             </label>
