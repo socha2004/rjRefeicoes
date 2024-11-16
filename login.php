@@ -170,7 +170,7 @@
                 $_SESSION['email_admin'] = $usuario_data['email_admin'];
 
                 // Redireciona para a página de administração
-                header('Location: http://localhost/rjRefeicoes/interface_administrador.php');
+                header('Location: https://still-trusty-stork.ngrok-free.app/rjRefeicoes/interface_administrador.php');
                 exit; // Importante para garantir que o script pare após o redirecionamento
             } else {
                 // Senha incorreta
