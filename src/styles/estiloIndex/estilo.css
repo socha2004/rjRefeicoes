@@ -11,6 +11,21 @@ h2{
     margin-top: 20px;
 }
 
+.logomarca{
+    -webkit-text-stroke-width: 2px; /* largura da borda */
+    -webkit-text-stroke-color: #000; /* cor da borda */
+    text-shadow: 2px 2px 5px #000;
+    font-weight: bolder;
+}
+
+.endereco{
+    -webkit-text-stroke-width: 1px; /* largura da borda */
+    -webkit-text-stroke-color: #000; /* cor da borda */
+    text-shadow: 2px 2px 5px #000;
+    font-weight: bolder;
+    font-size: 20pt;
+}
+
 .nav-item{
     font-size: 20px;
     font-weight: 400px;

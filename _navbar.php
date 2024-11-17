@@ -44,7 +44,7 @@
                                 </a>
                             </button>
                         </li>
-                        <li>
+                        <!-- <li>
                             <button>
                                 <a href="index.php" class="link">
                                 <svg fill="#000000" width="30px" height="30px" viewBox="0 -3.84 122.88 122.88" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="enable-background:new 0 0 122.88 115.21" xml:space="preserve">
@@ -59,7 +59,7 @@
                                 <span><b>Cardapio</b></span>
                                 </a>
                             </button>
-                        </li>
+                        </li> -->
                         <li>
                             <button>
                                 <a href="pedidos.php" class="link">

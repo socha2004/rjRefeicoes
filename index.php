@@ -1,5 +1,5 @@
 <?php
- 
+
 ?>
 
 <!DOCTYPE html>
@@ -26,6 +26,7 @@
             background-position: center;
             background-repeat: no-repeat;
             color: #fff;
+            padding: 0;
         }
 
         .navbar {
@@ -135,66 +136,66 @@
 </head>
 
 <body>
-<header class="cabecalho">
-    <?php include_once("_navbar.php") ?>
-    <div class="d-flex align-items-center p-2 cabecalho-container">
-        <img src="src/assets/imagens/logo.png" alt="Logo" class="logo">
-        <div class="d-flex flex-column">
-            <h1>R&J Refeições</h1>
-            <div class="d-flex align-items-center">
-                <!-- Ícone de localização -->
-                <i class="fa-solid fa-location-dot"></i>
-                <!-- Endereço -->
-                <span class="endereco">R. Tulio, 130</span>
+    <header class="cabecalho">
+        <?php include_once("_navbar.php") ?>
+        <div class="d-flex align-items-center cabecalho-container">
+            <img src="src/assets/imagens/logo.png" alt="Logo" class="logo">
+            <div class="d-flex flex-column">
+                <h1 class="logomarca">R&J Refeições</h1>
+                <div class="d-flex align-items-center">
+                    <!-- Ícone de localização -->
+                    <i class="fa-solid fa-location-dot"></i>
+                    <!-- Endereço -->
+                    <span class="endereco">R. Tulio, 130</span>
+                </div>
+                <span class="displayLoja">Aberto para pedidos!</span>
             </div>
-            <span class="displayLoja">Aberto para pedidos!</span>
         </div>
-    </div>
-</header>
+    </header>
 
 
     <main>
-    <div class="modal" id="modal" tabindex="-1">
-    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-        <div class="modal-content">
-            <div class="modal-header modal-carrinho">
-                <h4 class="modal-title">Meu Carrinho</h4>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <div class="card" style="width: 100%;">
-                    <img src="https://via.placeholder.com/150" class="card-img-top" alt="Produto">
-                    <div class="card-body">
-                        <h5 class="card-title">Nome do Produto</h5>
-                        <p class="card-text">Descrição breve do produto, destacando seus pontos principais.</p>
-                        <a href="#" class="btn btn-danger" id="removeFromCart">Remover do Carrinho</a>
+        <div class="modal" id="modal" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header modal-carrinho">
+                        <h4 class="modal-title">Meu Carrinho</h4>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="card" style="width: 100%;">
+                            <img src="https://via.placeholder.com/150" class="card-img-top" alt="Produto">
+                            <div class="card-body">
+                                <h5 class="card-title">Nome do Produto</h5>
+                                <p class="card-text">Descrição breve do produto, destacando seus pontos principais.</p>
+                                <a href="#" class="btn btn-danger" id="removeFromCart">Remover do Carrinho</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                        <button type="button" class="btn btn-primary">Comprar</button>
                     </div>
                 </div>
             </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-                <button type="button" class="btn btn-primary">Comprar</button>
+        </div>
+
+        <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #B10005;">
+            <a class="navbar-brand" href="#">Menu de Refeições</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-item nav-link text-light" href="#" data-category="refeicao">Pratos do Dia</a>
+                    <a class="nav-item nav-link text-light" href="#" data-category="sobremesa">Sobremesa</a>
+                    <a class="nav-item nav-link text-light" href="#" data-category="refrigerante">Refrigerante</a>
+                    <a class="nav-item nav-link text-light" href="#" data-category="suco">Sucos</a>
+                </div>
             </div>
-        </div>
-    </div>
-</div>
+        </nav>
 
-<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #B10005;">
-    <a class="navbar-brand" href="#">Menu de Refeições</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
-            <a class="nav-item nav-link text-light" href="#" data-category="refeicao">Pratos do Dia</a>
-            <a class="nav-item nav-link text-light" href="#" data-category="sobremesa">Sobremesa</a>
-            <a class="nav-item nav-link text-light" href="#" data-category="refrigerante">Refrigerante</a>
-            <a class="nav-item nav-link text-light" href="#" data-category="suco">Sucos</a>
-        </div>
-    </div>
-</nav>
 
-        
 
 
         <div class="menu-area d-flex justify-content-center">
@@ -208,9 +209,9 @@
                 while ($linha = $resultado->fetch_assoc()) {
                     $modalId = "detalhesPratoModal" . $linha['id_produto'];
                     $modalIdLabel = $modalId . "Label"; // Adicionando a definição da variável modalIdLabel
-                
+
                     $modalId = "detalhesPratoModal" . $linha['id_produto'];
-                    if($linha["status_produto"] == "Disponível"){
+                    if ($linha["status_produto"] == "Disponível") {
 
                         echo "
                                 <div class='card' style='width:18rem; min-width: 200px;' data-category='$linha[tipo_produto]'>
