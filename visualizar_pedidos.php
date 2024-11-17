@@ -29,6 +29,8 @@ function obterItensPedido($conn, $id_pedido) {
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
     <link rel="icon" href="img/fivecon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
+
     <style>
         body {
             background-color: #f4f7fc;
@@ -106,9 +108,23 @@ function obterItensPedido($conn, $id_pedido) {
 </head>
 
 <body>
+    <?php
+  
+
+ 
+
+    // Obtém o nome do administrador logado
+    $nomeAdmin = $_SESSION['nome_admin'];
+    ?>
+</body>
+
+<body>
     <!-- Sidebar -->
     <div class="sidebar">
         <h3 class="text-center text-white">Administrador</h3>
+        <div class="admin-info">
+        <p><strong style="color: white; text-align: center; display: block;"><?php echo htmlspecialchars($nomeAdmin); ?></strong></p>
+        </div>
         <a href="interface_administrador.php"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
         <a href="produtos.php"><i class="fas fa-box"></i> Produtos</a>
         <a href="visualizar_pedidos.php"><i class="fas fa-list"></i> Visualizar Pedidos</a>
@@ -185,6 +201,8 @@ function obterItensPedido($conn, $id_pedido) {
                                     </div>
                                 </td>
                             </tr>
+
+               
                         <?php } ?>
                     </tbody>
                 </table>
