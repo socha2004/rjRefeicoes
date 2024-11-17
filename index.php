@@ -16,12 +16,12 @@
     <link rel="stylesheet" href="src/styles/estiloIndex/estilo.css" type="text/css">
     <link rel="stylesheet" href="src/styles/menuIndex/estilo.css">
     <link rel="stylesheet" href="src/styles/estiloCarrinho/estilo.css">
+    <link rel="stylesheet" href="src/styles/statusindex/statusdorestaurante.css">
 
     <script src="https://kit.fontawesome.com/4a5dfc2a50.js" crossorigin="anonymous"></script>
-
     <style>
         .cabecalho {
-            background-image: url('src/assets/imagens/FOGO.jpg');
+            background-image: url('src/assets/imagens/Wallpaper2.jpg');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -135,46 +135,51 @@
 </head>
 
 <body>
-    <header class="cabecalho">
-        <?php include_once("_navbar.php") ?>
-        <div class="d-flex align-items-center p-2 cabecalho-container">
-            <img src="src/assets/imagens/logo.png" alt="Logo" class="logo">
-            <div class="d-flex flex-column">
-                <h1>R&J Refeições</h1>
-                <i class="fa-solid fa-location-dot"> R. Tulio, 130</i>
-                <span class="displayLoja">Aberto para pedidos!</span>
+<header class="cabecalho">
+    <?php include_once("_navbar.php") ?>
+    <div class="d-flex align-items-center p-2 cabecalho-container">
+        <img src="src/assets/imagens/logo.png" alt="Logo" class="logo">
+        <div class="d-flex flex-column">
+            <h1>R&J Refeições</h1>
+            <div class="d-flex align-items-center">
+                <!-- Ícone de localização -->
+                <i class="fa-solid fa-location-dot"></i>
+                <!-- Endereço -->
+                <span class="endereco">R. Tulio, 130</span>
             </div>
+            <span class="displayLoja">Aberto para pedidos!</span>
         </div>
-    </header>
+    </div>
+</header>
+
 
     <main>
-        <div class="modal" id="modal" tabindex="-1">
-            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-                <div class="modal-content">
-                    <div class="modal-header modal-carrinho">
-                        <h4 class="modal-tittle">Meu Carrinho</h4>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="card" style="width: 18rem;">
-                            <img src="..." class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the
-                                    bulk of the card's content.</p>
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-                        <button type="button" class="btn btn-primary">Comprar</button>
+    <div class="modal" id="modal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header modal-carrinho">
+                <h4 class="modal-title">Meu Carrinho</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="card" style="width: 100%;">
+                    <img src="https://via.placeholder.com/150" class="card-img-top" alt="Produto">
+                    <div class="card-body">
+                        <h5 class="card-title">Nome do Produto</h5>
+                        <p class="card-text">Descrição breve do produto, destacando seus pontos principais.</p>
+                        <a href="#" class="btn btn-danger" id="removeFromCart">Remover do Carrinho</a>
                     </div>
                 </div>
             </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                <button type="button" class="btn btn-primary">Comprar</button>
+            </div>
         </div>
+    </div>
+</div>
 
-        <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #B10005;">
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #B10005;">
     <a class="navbar-brand" href="#">Menu de Refeições</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -188,6 +193,8 @@
         </div>
     </div>
 </nav>
+
+        
 
 
         <div class="menu-area d-flex justify-content-center">
