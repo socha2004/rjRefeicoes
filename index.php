@@ -164,13 +164,8 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <div class="card" style="width: 100%;">
-                            <img src="https://via.placeholder.com/150" class="card-img-top" alt="Produto">
-                            <div class="card-body">
-                                <h5 class="card-title">Nome do Produto</h5>
-                                <p class="card-text">Descrição breve do produto, destacando seus pontos principais.</p>
-                                <a href="#" class="btn btn-danger" id="removeFromCart">Remover do Carrinho</a>
-                            </div>
+                        <div class="itens-carrinho">
+                         
                         </div>
                     </div>
                     <div class="modal-footer">
@@ -211,22 +206,48 @@
                     $modalId = "detalhesPratoModal" . $linha['id_produto'];
                     $modalIdLabel = $modalId . "Label"; // Adicionando a definição da variável modalIdLabel
 
+                    $modalCarrinhoId = "carrinho" . $linha['id_produto'];
+
                     $modalId = "detalhesPratoModal" . $linha['id_produto'];
                     if ($linha["status_produto"] == "Disponível") {
 
                         echo "
-                                <div class='card' style='width:18rem; min-width: 200px;' data-category='$linha[tipo_produto]'>
-                                    <img class='card-img-top' src='$linha[imagem_produto]' alt='Card image cap' style='max-height:190px;'>
+                                <div class='card w-50' style='width:18rem; min-width: 200px;' data-category='$linha[tipo_produto]'>
+                                    <img class='card-img-top w-100 h-100' src='$linha[imagem_produto]' alt='Card image cap' style='max-height:190px;'>
                                     <h5 class='card-title p-1'>$linha[nome_produto]</h5>
                                     <div class='card-body'>
                                         <p class='card-text'>Serve <b>$linha[qtd_pessoas] pessoas</b></p>
                                         <p class='card-text'><b>Preço:</b> $linha[preco_produto]</p>
-                                        <button type='button' class='btn btn-success' data-bs-toggle='modal' data-bs-target='#modalCarrinho'>Comprar</button>
+                                        <button type='button' class='btn btn-success' data-bs-toggle='modal' data-bs-target='#$modalCarrinhoId'>Comprar</button>
                                         <button type='button' class='btn btn-primary' data-bs-toggle='modal' data-bs-target='#$modalId'>Detalhes</button>
                                     </div>
                                 </div>
-                           
-    
+                                <div class='modal fade' id='$modalCarrinhoId' tabindex='-1' aria-labelledby='' Label' aria-hidden='true'>
+                <div class='modal-dialog modal-dialog-centered'>
+                    <div class='modal-content'>
+                        <div class='modal-header'>
+                            <h5 class='modal-title' id='Label'>Adicionar ao carrinho</h5>
+                            <button type='button' class='btn-close' data-bs-dismiss='modal' aria-label='Fechar'></button>
+                        </div>
+                        <div class='modal-body'>
+                            <!-- Conteúdo detalhado do prato -->
+                            <p><strong>Produto: </strong><span>$linha[nome_produto]</span></p>
+                            <p><strong>Preço: </strong><span class='preco-produto'>$linha[preco_produto]</span> R$</p>
+                            <h6>Quantidade a ser comprada:</h6>
+                            <input type='number' class='form-control qtd-produto'>
+                            <h6>Observação no produto:</h6>
+                            <input type='text' class='form-control'>
+                            <br>
+                            <h5>Preço total: <span class='preco-total'></span> R$</h5>
+                        </div>
+                        <div class='modal-footer'>
+                            <button type='button' class='btn btn-secondary' data-bs-dismiss='modal'>Fechar</button>
+                            <button type='button' class='btn btn-success' data-bs-dismiss='modal'>Adicionar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
                             <div class='modal fade' id='$modalId' tabindex='-1' aria-labelledby='$modalIdLabel' aria-hidden='true'>
                                 <div class='modal-dialog modal-dialog-centered'>
                                     <div class='modal-content'>
@@ -244,41 +265,20 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>";
+                            </div>
+                            
+                            ";
                     }
                 }
             }
             ?>
-            <div class='modal fade' id='modalCarrinho' tabindex='-1' aria-labelledby='' Label' aria-hidden='true'>
-                <div class='modal-dialog modal-dialog-centered'>
-                    <div class='modal-content'>
-                        <div class='modal-header'>
-                            <h5 class='modal-title' id='Label'>Adicionar ao carrinho</h5>
-                            <button type='button' class='btn-close' data-bs-dismiss='modal' aria-label='Fechar'></button>
-                        </div>
-                        <div class='modal-body'>
-                            <!-- Conteúdo detalhado do prato -->
-                            <p><strong>Produto:</strong><span></span></p>
-                            <p><strong>Preço:</strong><span></span></p>
-                            <h6>Quantidade a ser comprada:</h6>
-                            <input type='number' class='form-control'>
-                            <h6>Observação no produto:</h6>
-                            <input type='text' class='form-control'>
-                            <br>
-                            <h5>Preço total: <span></span></h5>
-                        </div>
-                        <div class='modal-footer'>
-                            <button type='button' class='btn btn-secondary' data-bs-dismiss='modal'>Fechar</button>
-                            <button type='button' class='btn btn-success' data-bs-dismiss='modal'>Adicionar</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            
         </div>
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="src/js/carrinhoModal.js"></script>
+    <script src="src/js/calculaPreco.js"></script>
 </body>
 
 </html>
