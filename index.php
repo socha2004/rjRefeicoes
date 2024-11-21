@@ -131,8 +131,6 @@
             margin-bottom: 20px;
         }
     </style>
-
-    <script src="src/js/abertoFechadoPedidos.js"></script>
    
 </head>
 
@@ -164,7 +162,7 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <div class="itens-carrinho">
+                        <div id="itens-carrinho">
                          
                         </div>
                     </div>
@@ -242,7 +240,7 @@
                         </div>
                         <div class='modal-footer'>
                             <button type='button' class='btn btn-secondary' data-bs-dismiss='modal'>Fechar</button>
-                            <button type='button' class='btn btn-success' data-bs-dismiss='modal'>Adicionar</button>
+                            <button type='button' class='btn btn-success btn-add-carrinho' data-bs-dismiss='modal'>Adicionar</button>
                         </div>
                     </div>
                 </div>
@@ -279,6 +277,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="src/js/carrinhoModal.js"></script>
     <script src="src/js/calculaPreco.js"></script>
+    <script src="src/js/filtroProdutos.js"></script>
 </body>
 
 </html>

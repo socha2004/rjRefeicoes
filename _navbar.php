@@ -110,6 +110,5 @@
         </label>
     
     </nav>
-    <script src="src/js/carrinhoModal.js"></script>
 </body>
 </html>
