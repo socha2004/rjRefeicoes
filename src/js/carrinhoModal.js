@@ -32,12 +32,14 @@ document.querySelectorAll('.btn-add-carrinho').forEach((button) => {
         // Adiciona ao array do carrinho
         carrinho.push({ nome: nomeProduto, quantidade, precoTotal, observacao });
         atualizarCarrinho(); // Atualiza o modal do carrinho
+        $.notify("Produto adicionado ao carrinho.", "success");
     });
 });
 
 function removerItem(index) {
     carrinho.splice(index, 1);
     atualizarCarrinho();
+    $.notify("Produto excluído do carrinho.", "info");
 }
 
 function abrirModal(){

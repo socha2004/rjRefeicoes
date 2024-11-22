@@ -168,7 +168,7 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-                        <button type="button" class="btn btn-primary">Comprar</button>
+                        <button type="button" class="btn btn-primary" id=" btn-add-carrinho">Comprar</button>
                     </div>
                 </div>
             </div>
@@ -273,7 +273,11 @@
             
         </div>
     </main>
-
+    
+    <!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!-- Notify.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/notify/0.4.2/notify.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="src/js/carrinhoModal.js"></script>
     <script src="src/js/calculaPreco.js"></script>
