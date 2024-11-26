@@ -1,0 +1,157 @@
+body{
+    font-family: "inria-sans-light", sans-serif;
+    background-color: #d9d9d9;
+}
+
+h1{
+    margin: 0px 0 0px 0;
+}
+
+h2{
+    margin-top: 20px;
+}
+
+.logomarca{
+    -webkit-text-stroke-width: 2px; /* largura da borda */
+    -webkit-text-stroke-color: #000; /* cor da borda */
+    text-shadow: 2px 2px 5px #000;
+    font-weight: bolder;
+}
+
+.endereco{
+    -webkit-text-stroke-width: 1px; /* largura da borda */
+    -webkit-text-stroke-color: #000; /* cor da borda */
+    text-shadow: 2px 2px 5px #000;
+    font-weight: bolder;
+    font-size: 20pt;
+}
+
+.nav-item{
+    font-size: 20px;
+    font-weight: 400px;
+}
+
+.menu-topo{
+    background-color: #B10005;
+    color: #fff;
+}
+
+.card{
+    width: 300px; /* Define largura fixa */
+    height: 100%; /* Ajusta altura dinamicamente com base no conteúdo */
+    margin: 10px; /* Espaço entre os cards */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.card img {
+    height: 190px; /* Altura fixa para as imagens */
+ /* Ajusta a imagem para ocupar o espaço sem distorcer */
+    border-radius: 10px 10px 0 0;
+}
+
+
+.logo{
+    margin-right: 20px;
+    width: 136px;
+    height: 136px;
+}
+
+.cardapio-area{
+    background-color: #d9d9d9;
+}
+
+.menu-area{
+    margin-top: 2%;
+    border-top: 2px solid black;
+    border-bottom:1px solid black ;
+    border-right:1px solid black ;
+    border-left:1px solid black ;
+    border-radius: 5px;
+    background-color: #fff;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card-produto{
+    flex-basis: 48%;
+    -webkit-box-shadow: 10px 10px 18px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 18px 0px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 18px 0px rgba(0,0,0,0.75);
+}
+
+ .img-produto{
+    max-width: 150px;
+    max-height: 150px;
+    border-radius: 5px;
+    box-shadow: 20px 8px 23px -7px rgba(0,0,0,0.75);
+ }
+
+ .link{
+    text-decoration: none;
+    color: #000;
+    font-weight: 0;
+ }
+
+ /*PAGINA DE LOOGIN */
+
+ .form-wraper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+
+ }
+
+ .login-form{
+    border-top: 2px solid black;
+    border: 1px solid black;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 10px;
+
+    -webkit-box-shadow: 18px 11px 19px -1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 18px 11px 19px -1px rgba(0,0,0,0.75);
+    box-shadow: 18px 11px 19px -1px rgba(0,0,0,0.75);
+
+    display: flex;
+    flex-direction: column;
+ }
+
+.login-form input{
+    margin-bottom: 10px;
+}
+
+ .header-form{
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+ }
+
+/*TELA CADASTRO ADMINISTRADOR*/
+
+.form-admin{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+
+}
+
+.form-admin input, select{
+    width: 50%;
+}
+
+.button-admin{
+    width: 30%;
+}
+
+ @media (max-width: 576px) {
+    .card {
+        flex: 1 1 100%; /* Cards ocupam 100% da largura em telas pequenas */
+        max-width: 100%;
+    }
+}
