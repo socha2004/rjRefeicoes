@@ -216,16 +216,16 @@ $_SESSION["preco_produto"] = "default";
                     if ($linha["status_produto"] == "Disponível") {
 
                         echo "
-                                <div class='card w-50' style='width:18rem; min-width: 200px;' data-category='$linha[tipo_produto]'>
-                                    <img class='card-img-top w-100 h-100' src='$linha[imagem_produto]' alt='Card image cap' style='max-height:190px;'>
-                                    <h5 class='card-title p-1'>$linha[nome_produto]</h5>
-                                    <div class='card-body'>
-                                        <p class='card-text'>Serve <b>$linha[qtd_pessoas] pessoas</b></p>
-                                        <p class='card-text'><b>Preço:</b> $linha[preco_produto]</p>
-                                        <button type='button' class='btn btn-success' data-bs-toggle='modal' data-bs-target='#$modalCarrinhoId'>Comprar</button>
-                                        <button type='button' class='btn btn-primary' data-bs-toggle='modal' data-bs-target='#$modalId'>Detalhes</button>
-                                    </div>
-                                </div>
+                                <div class='card' data-category='$linha[tipo_produto]'>
+    <img class='card-img-top' src='$linha[imagem_produto]' alt='Card image cap'>
+    <h5 class='card-title p-1 text-center'>$linha[nome_produto]</h5>
+    <div class='card-body'>
+        <p class='card-text'>Serve <b>$linha[qtd_pessoas] pessoas</b></p>
+        <p class='card-text'><b>Preço:</b> R$ $linha[preco_produto]</p>
+        <button type='button' class='btn btn-success' data-bs-toggle='modal' data-bs-target='#$modalCarrinhoId'>Comprar</button>
+        <button type='button' class='btn btn-primary' data-bs-toggle='modal' data-bs-target='#$modalId'>Detalhes</button>
+    </div>
+</div>
                                 <div class='modal fade' id='$modalCarrinhoId' tabindex='-1' aria-labelledby='' Label' aria-hidden='true'>
                 <div class='modal-dialog modal-dialog-centered'>
                     <div class='modal-content'>
