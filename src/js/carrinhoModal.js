@@ -33,7 +33,17 @@ document.querySelectorAll('.btn-add-carrinho').forEach((button) => {
         carrinho.push({ nome: nomeProduto, quantidade, precoTotal, observacao });
         atualizarCarrinho(); // Atualiza o modal do carrinho
         $.notify("Produto adicionado ao carrinho.", "success");
+        console.log(carrinho);
     });
+});
+
+// Código para levar à tela de checkout
+document.getElementById("btn-comprar").addEventListener("click", function () {
+    const formCarrinho = document.getElementById("form-carrinho");
+    const carrinhoInput = document.getElementById("carrinho-input");
+
+    carrinhoInput.value = JSON.stringify(carrinho); // Salva os dados no input escondido
+    formCarrinho.submit(); // Envia o formulário
 });
 
 function removerItem(index) {

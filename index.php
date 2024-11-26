@@ -1,5 +1,8 @@
 <?php
-
+session_start();
+$_SESSION["produto"] = "default";
+$_SESSION["quantidade_produto"] = "default";
+$_SESSION["preco_produto"] = "default";
 ?>
 
 <!DOCTYPE html>
@@ -165,10 +168,13 @@
                         <div id="itens-carrinho">
                          
                         </div>
+                        <form action="checkout.php" method="post" id="form-carrinho">
+                            <input type="hidden" name="carrinho" id="carrinho-input">
+                        </form>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-                        <button type="button" class="btn btn-primary" id=" btn-add-carrinho">Comprar</button>
+                        <button type="button" class="btn btn-primary" id="btn-comprar">Comprar</button>
                     </div>
                 </div>
             </div>
@@ -232,7 +238,7 @@
                             <p><strong>Produto: </strong><span>$linha[nome_produto]</span></p>
                             <p><strong>Preço: </strong><span class='preco-produto'>$linha[preco_produto]</span> R$</p>
                             <h6>Quantidade a ser comprada:</h6>
-                            <input type='number' class='form-control qtd-produto'>
+                            <input type='number' class='form-control qtd-produto' required>
                             <h6>Observação no produto:</h6>
                             <input type='text' class='form-control'>
                             <br>
