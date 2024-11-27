@@ -153,7 +153,7 @@
         </div>
         <a href="interface_administrador.php"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
         <a href="produtos.php"><i class="fas fa-box"></i> Produtos</a>
-        <a href="visualizar_pedidos.php"><i class="fas fa-list"></i> Visualizar Pedidos</a>
+        <a href="visualizar_pedidos.php"><i class="fas fa-box"></i> Visualizar Pedidos</a>
         <a href="relatorios.php"><i class="fas fa-chart-line"></i> Relatórios</a>
         <a href="configuracoes.php"><i class="fas fa-cogs"></i> Configurações</a>
         <a href="logout.php"><i class="fas fa-sign-out-alt"></i> Sair</a>

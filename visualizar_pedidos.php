@@ -3,10 +3,10 @@ session_start();
 include_once("src/db/conexao.php");
 
 // Consultar pedidos e detalhes
-$query_pedidos = "SELECT p.id_pedido, p.data_pedido, p.status_pedido, p.valor_total, c.nome_cliente, c.email_cliente 
-                  FROM pedidos p
-                  JOIN clientes c ON p.id_cliente = c.id_cliente
-                  ORDER BY p.data_pedido DESC";
+$query_pedidos = "SELECT id_pedido, data_pedido, status_pedido, valor_total, nome_cliente, email_cliente 
+                  FROM pedidos
+                  ORDER BY data_pedido DESC";
+
 
 $result_pedidos = mysqli_query($conn, $query_pedidos);
 
@@ -166,7 +166,7 @@ function obterItensPedido($conn, $id_pedido) {
                                         Visualizar Itens
                                     </button>
                                     <!-- Botão para cancelar o pedido -->
-                                    <a href="cancelar_pedido.php?id=<?php echo $pedido['id_pedido']; ?>" class="btn btn-cancelar">Cancelar Pedido</a>
+                                    <a href="cancelar_pedido.php?id=<?php echo $pedidos['id_pedido']; ?>" class="btn btn-cancelar">Cancelar Pedido</a>
                                 </td>
                             </tr>
 
