@@ -159,6 +159,9 @@
                                 <hr>
                                 <p class='card-text'>Status: <strong>{$linha['status_pedido']}</strong></p>
                                 <p class='card-text'>Forma de pagamento: <strong>{$linha['forma_pagamento']}</strong></p>
+                                <h4 class='card-subtitle mb-2 text-muted'>Produtos do pedido:</h4>
+                                <p class='card-text ' style='display: none;'>Produtos do pedido: <strong class='produtos'>{$linha['itens_pedido']}</strong></p>
+                                <p class='card-text produtos-area'></p>
                                 <hr>
                                 <p class='card-text'>Preço total: <strong>R$ {$linha['valor_total']}</strong></p>
                             </div>
@@ -176,6 +179,7 @@
         }
         ?>
     </main>
+    <script src="src/js/formataProdutos.js"></script>
 </body>
 
 </html>

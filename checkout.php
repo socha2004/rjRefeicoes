@@ -98,9 +98,9 @@ function registraPedido()
             </table>
         </div>
         <div class="box-total d-flex">
-            <svg version="1.1" id="Icons" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" xml:space="preserve" width="40px" height="40px" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <style type="text/css"> .st0{fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;} </style> <rect x="1" y="6" class="st0" width="30" height="20"></rect> <path class="st0" d="M28,20v-8c-1.7,0-3-1.3-3-3H7c0,1.7-1.3,3-3,3v8c1.7,0,3,1.3,3,3h18C25,21.3,26.3,20,28,20z"></path> <ellipse class="st0" cx="16" cy="16" rx="3" ry="4"></ellipse> </g></svg>        
+           
             <h4 class="titulo-preco-total m-2"><span class="preco-total-resumo"></span></h4>
-            <svg version="1.1" id="Icons" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" xml:space="preserve" width="40px" height="40px" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <style type="text/css"> .st0{fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;} </style> <rect x="1" y="6" class="st0" width="30" height="20"></rect> <path class="st0" d="M28,20v-8c-1.7,0-3-1.3-3-3H7c0,1.7-1.3,3-3,3v8c1.7,0,3,1.3,3,3h18C25,21.3,26.3,20,28,20z"></path> <ellipse class="st0" cx="16" cy="16" rx="3" ry="4"></ellipse> </g></svg>
+           
         </div>
         <div class="box">
             <br>

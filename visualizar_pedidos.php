@@ -153,7 +153,7 @@ function obterItensPedido($conn, $id_pedido) {
                         </tr>
                     </thead>
                     <tbody>
-                        <?php while ($pedido = mysqli_fetch_assoc($result_pedidos)) { ?>
+                    <?php while ($pedido = mysqli_fetch_assoc($result_pedidos)) { ?>
                             <tr>
                                 <td><?php echo $pedido['id_pedido']; ?></td>
                                 <td><?php echo $pedido['nome_cliente']; ?></td>
@@ -161,16 +161,12 @@ function obterItensPedido($conn, $id_pedido) {
                                 <td><?php echo $pedido['status_pedido']; ?></td>
                                 <td>R$ <?php echo number_format($pedido['valor_total'], 2, ',', '.'); ?></td>
                                 <td>
-                                    <!-- Botão para visualizar os itens do pedido -->
                                     <button class="btn btn-visualizar" data-bs-toggle="collapse" data-bs-target="#itens-<?php echo $pedido['id_pedido']; ?>" aria-expanded="false" aria-controls="itens-<?php echo $pedido['id_pedido']; ?>">
                                         Visualizar Itens
                                     </button>
-                                    <!-- Botão para cancelar o pedido -->
-                                    <a href="cancelar_pedido.php?id=<?php echo $pedidos['id_pedido']; ?>" class="btn btn-cancelar">Cancelar Pedido</a>
+                                    <a href="cancelar_pedido.php?id=<?php echo $pedido['id_pedido']; ?>" class="btn btn-cancelar">Cancelar Pedido</a>
                                 </td>
                             </tr>
-
-                            <!-- Detalhes do Pedido (Itens) -->
                             <tr>
                                 <td colspan="6">
                                     <div class="collapse" id="itens-<?php echo $pedido['id_pedido']; ?>">
@@ -201,8 +197,6 @@ function obterItensPedido($conn, $id_pedido) {
                                     </div>
                                 </td>
                             </tr>
-
-               
                         <?php } ?>
                     </tbody>
                 </table>
