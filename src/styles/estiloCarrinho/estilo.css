@@ -1,18 +1,47 @@
-.modal-carrinho{
+.modal-carrinho {
     background-color: #B10005;
     color: #fff;
+    padding: 15px; /* Espaçamento interno */
+    border-radius: 10px 10px 0 0; /* Bordas arredondadas no topo */
 }
 
-/* .modal-content {
-   height: 500px;
-   width: 500px;
+.modal-content {
+    border-radius: 10px; /* Bordas arredondadas */
+    overflow: hidden; /* Remove o excesso de conteúdo */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Sombra */
 }
 
-.modal-header {
-  
-}
-
-.modal-tittle {
-    margin-left: 130px;
+.modal-title {
     font-family: 'Times New Roman', Times, serif;
-} */
+    font-size: 1.5em;
+    margin: 0 auto;
+    text-align: center; /* Centraliza o título */
+}
+
+.card {
+    border: none; /* Remove a borda padrão */
+    border-radius: 10px; /* Bordas arredondadas */
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.card-img-top {
+    border-bottom: 2px solid #ddd; /* Linha abaixo da imagem */
+}
+
+.card-title {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #B10005;
+}
+
+.card-text {
+    color: #555;
+}
+
+.modal-footer {
+    background-color: #f1f1f1;
+    border-top: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+}

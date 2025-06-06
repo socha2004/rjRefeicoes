@@ -43,6 +43,12 @@
             color: #f8f9fa;
         }
 
+        .sidebar .admin-info {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #ecf0f1;
+        }
+
         .content {
             margin-left: 260px;
             padding: 30px;
@@ -126,15 +132,32 @@
 </head>
 
 <body>
+    <?php
+    session_start();
+
+    // Verifica se o usuário está logado
+    if (!isset($_SESSION['id_admin'])) {
+        header("Location: index.php");
+        exit;
+    }
+
+    // Obtém o nome do administrador logado
+    $nomeAdmin = $_SESSION['nome_admin'];
+    ?>
+
     <!-- Sidebar -->
     <div class="sidebar">
         <h3 class="text-center text-white">Administrador</h3>
+        <div class="admin-info">
+            <p>Bem-vindo, <strong><?php echo htmlspecialchars($nomeAdmin); ?></strong></p>
+        </div>
         <a href="interface_administrador.php"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
         <a href="produtos.php"><i class="fas fa-box"></i> Produtos</a>
-        <a href="visualizar_pedidos.php"><i class="fas fa-list"></i> Visualizar Pedidos</a>
+        <a href="visualizar_pedidos.php"><i class="fas fa-box"></i> Visualizar Pedidos</a>
         <a href="relatorios.php"><i class="fas fa-chart-line"></i> Relatórios</a>
         <a href="configuracoes.php"><i class="fas fa-cogs"></i> Configurações</a>
-        <a href="index.php"><i class="fas fa-sign-out-alt"></i> Sair</a>
+        <a href="logout.php"><i class="fas fa-sign-out-alt"></i> Sair</a>
+
     </div>
 
     <!-- Content Area -->

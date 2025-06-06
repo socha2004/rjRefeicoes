@@ -3,10 +3,10 @@ session_start();
 include_once("src/db/conexao.php");
 
 // Consultar pedidos e detalhes
-$query_pedidos = "SELECT p.id_pedido, p.data_pedido, p.status_pedido, p.valor_total, c.nome_cliente, c.email_cliente 
-                  FROM pedidos p
-                  JOIN clientes c ON p.id_cliente = c.id_cliente
-                  ORDER BY p.data_pedido DESC";
+$query_pedidos = "SELECT id_pedido, data_pedido, status_pedido, valor_total, nome_cliente, email_cliente 
+                  FROM pedidos
+                  ORDER BY data_pedido DESC";
+
 
 $result_pedidos = mysqli_query($conn, $query_pedidos);
 
@@ -29,6 +29,8 @@ function obterItensPedido($conn, $id_pedido) {
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
     <link rel="icon" href="img/fivecon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
+
     <style>
         body {
             background-color: #f4f7fc;
@@ -106,9 +108,23 @@ function obterItensPedido($conn, $id_pedido) {
 </head>
 
 <body>
+    <?php
+  
+
+ 
+
+    // Obtém o nome do administrador logado
+    $nomeAdmin = $_SESSION['nome_admin'];
+    ?>
+</body>
+
+<body>
     <!-- Sidebar -->
     <div class="sidebar">
         <h3 class="text-center text-white">Administrador</h3>
+        <div class="admin-info">
+        <p><strong style="color: white; text-align: center; display: block;"><?php echo htmlspecialchars($nomeAdmin); ?></strong></p>
+        </div>
         <a href="interface_administrador.php"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
         <a href="produtos.php"><i class="fas fa-box"></i> Produtos</a>
         <a href="visualizar_pedidos.php"><i class="fas fa-list"></i> Visualizar Pedidos</a>
@@ -137,7 +153,7 @@ function obterItensPedido($conn, $id_pedido) {
                         </tr>
                     </thead>
                     <tbody>
-                        <?php while ($pedido = mysqli_fetch_assoc($result_pedidos)) { ?>
+                    <?php while ($pedido = mysqli_fetch_assoc($result_pedidos)) { ?>
                             <tr>
                                 <td><?php echo $pedido['id_pedido']; ?></td>
                                 <td><?php echo $pedido['nome_cliente']; ?></td>
@@ -145,16 +161,12 @@ function obterItensPedido($conn, $id_pedido) {
                                 <td><?php echo $pedido['status_pedido']; ?></td>
                                 <td>R$ <?php echo number_format($pedido['valor_total'], 2, ',', '.'); ?></td>
                                 <td>
-                                    <!-- Botão para visualizar os itens do pedido -->
                                     <button class="btn btn-visualizar" data-bs-toggle="collapse" data-bs-target="#itens-<?php echo $pedido['id_pedido']; ?>" aria-expanded="false" aria-controls="itens-<?php echo $pedido['id_pedido']; ?>">
                                         Visualizar Itens
                                     </button>
-                                    <!-- Botão para cancelar o pedido -->
                                     <a href="cancelar_pedido.php?id=<?php echo $pedido['id_pedido']; ?>" class="btn btn-cancelar">Cancelar Pedido</a>
                                 </td>
                             </tr>
-
-                            <!-- Detalhes do Pedido (Itens) -->
                             <tr>
                                 <td colspan="6">
                                     <div class="collapse" id="itens-<?php echo $pedido['id_pedido']; ?>">

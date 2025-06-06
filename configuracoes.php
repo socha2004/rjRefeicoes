@@ -100,9 +100,23 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['cadastrar_admin'])) {
 </head>
 
 <body>
+    <?php
+  
+
+ 
+
+    // Obtém o nome do administrador logado
+    $nomeAdmin = $_SESSION['nome_admin'];
+    ?>
+</body>
+
+<body>
     <!-- Sidebar -->
     <div class="sidebar">
         <h3 class="text-center text-white">Administrador</h3>
+        <div class="admin-info">
+        <p><strong style="color: white; text-align: center; display: block;"><?php echo htmlspecialchars($nomeAdmin); ?></strong></p>
+        </div>
         <a href="interface_administrador.php"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
         <a href="produtos.php"><i class="fas fa-box"></i> Produtos</a>
         <a href="visualizar_pedidos.php"><i class="fas fa-list"></i> Visualizar Pedidos</a>
@@ -119,7 +133,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['cadastrar_admin'])) {
             </div>
             <div class="card-body">
                 <h5 class="text-center mb-4">Cadastrar Novo Administrador</h5>
-                <form method="POST" action="" class="form-group">
+                <form method="POST" action="" class="form-group" autocomplete="off">
                     <div class="mb-3">
                         <label for="nome_admin" class="form-label">Nome Completo</label>
                         <input type="text" class="form-control" id="nome_admin" name="nome_admin" required>
