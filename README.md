@@ -40,4 +40,5 @@ Nós da equipe de desenvolvimento do software possuímos planos futuro para o so
   <li>Refatoração da lógica do backend para facilitar a manutenção e desempenho da aplicação</li>
   <li>Migrar a stack para React.js e Laravel, por se tratarem de ferramentas que irão contribuir na organização dos componentes e aproveitar a code-base do projeto.</li>
   <li>Tornar a rastreabilidade dos pedidos mais explícita para assim o usuário acompanhar com clareza</li>
+  <li>Publicar o software e disponibiliza-lo como um Saas para que outros estabelecimentos possam usufruir das funcionalidades do mesmo</li>
 </ul>
