@@ -1,0 +1,73 @@
+/* Estilização para o cabeçalho */
+.cabecalho {
+    background-image: url('src/assets/imagens/FOGO.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff;
+    padding: 10px;
+}
+
+/* Estilização para o container do cabeçalho */
+.cabecalho-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Alinha todo o conteúdo à esquerda */
+    padding: 10px;
+}
+
+
+
+
+
+/* Estilo para o endereço */
+.cabecalho .endereco {
+    font-size: 1em;        /* Tamanho do texto */
+    color: #fff;           /* Cor do texto branco */
+    font-weight: bold;     /* Torna o texto em negrito */
+    display: inline-block; /* Faz com que o endereço se alinhe à esquerda */
+    vertical-align: middle; /* Alinha o endereço verticalmente com o ícone */
+    text-shadow: -2px 0px 5px rgba(0, 0, 0, 0.9); /* Aumenta a opacidade da sombra */
+}
+
+.cabecalho i.fa-location-dot {
+    font-size: 1.5em; /* Tamanho do ícone */
+    margin-right: 10px; /* Espaço entre o ícone e o texto */
+    background: linear-gradient(45deg, #c90a0a, #ff4500); /* Gradiente */
+    -webkit-background-clip: text; /* Faz o gradiente "pintar" o texto */
+    -webkit-text-fill-color: transparent; /* Remove a cor sólida do texto */
+}
+
+
+/* Estilização para a plaquinha "Aberto para pedidos!" */
+.displayLoja {
+    font-size: 0.8em; 
+    font-weight: bold;
+    color: white;
+    background-color: #28a745;
+    padding: 4px 10px; /* Ajuste do padding para maior visibilidade */
+    border-radius: 5px;
+    border: 1px solid #007b3e;
+    text-align: center;
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+    max-width: 140px; /* Ajuste de tamanho para não cortar */
+    word-wrap: break-word;
+    margin-top: 5px; /* Espaço acima da plaquinha */
+    margin-left: 10px; /* Espaço à esquerda da plaquinha */
+    animation: pulse 2s infinite; /* Animação de pulso */
+}
+
+/* Animação de pulso */
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1); /* Tamanho inicial e final */
+    }
+    50% {
+        transform: scale(1.1); /* Leve aumento no tamanho */
+    }
+}
+

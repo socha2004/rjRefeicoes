@@ -139,9 +139,22 @@ $result = mysqli_query($conn, $query);
 </head>
 
 <body>
+    <?php
+  
+
+ 
+
+    // Obtém o nome do administrador logado
+    $nomeAdmin = $_SESSION['nome_admin'];
+    ?>
+</body>
+<body>
     <!-- Sidebar -->
     <div class="sidebar">
         <h3 class="text-center text-white">Administrador</h3>
+        <div class="admin-info">
+        <p><strong style="color: white; text-align: center; display: block;"><?php echo htmlspecialchars($nomeAdmin); ?></strong></p>
+        </div>
         <a href="interface_administrador.php"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
         <a href="produtos.php"><i class="fas fa-box"></i> Produtos</a>
         <a href="visualizar_pedidos.php"><i class="fas fa-list"></i> Visualizar Pedidos</a>

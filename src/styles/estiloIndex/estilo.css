@@ -11,6 +11,21 @@ h2{
     margin-top: 20px;
 }
 
+.logomarca{
+    -webkit-text-stroke-width: 2px; /* largura da borda */
+    -webkit-text-stroke-color: #000; /* cor da borda */
+    text-shadow: 2px 2px 5px #000;
+    font-weight: bolder;
+}
+
+.endereco{
+    -webkit-text-stroke-width: 1px; /* largura da borda */
+    -webkit-text-stroke-color: #000; /* cor da borda */
+    text-shadow: 2px 2px 5px #000;
+    font-weight: bolder;
+    font-size: 20pt;
+}
+
 .nav-item{
     font-size: 20px;
     font-weight: 400px;
@@ -22,12 +37,20 @@ h2{
 }
 
 .card{
-    margin: 10px;
-    width: 50%;
-    flex: 1 1 200px; 
-    max-width: 300px; 
-    min-width: 200px;
+    width: 300px; /* Define largura fixa */
+    height: 100%; /* Ajusta altura dinamicamente com base no conteúdo */
+    margin: 10px; /* Espaço entre os cards */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
 }
+
+.card img {
+    height: 190px; /* Altura fixa para as imagens */
+ /* Ajusta a imagem para ocupar o espaço sem distorcer */
+    border-radius: 10px 10px 0 0;
+}
+
 
 .logo{
     margin-right: 20px;
@@ -48,6 +71,9 @@ h2{
     border-radius: 5px;
     background-color: #fff;
     flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
 
 .card-produto{
