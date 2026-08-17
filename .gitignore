@@ -1,0 +1,25 @@
+# Dependências
+/vendor/
+/node_modules/
+
+# Arquivos de ambiente e sensíveis
+.env
+.env.backup
+.env.local
+
+# Logs e Cache
+/storage/*.key
+/storage/logs/*.log
+/bootstrap/cache/*.php
+/var/log/
+/var/cache/
+
+# Arquivos do Sistema Operacional
+.DS_Store
+Thumbs.db
+
+# IDEs e Editores
+.idea/
+.vscode/
+*.swp
+*.swo
